@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.locale.languageDirection' expr:lang='data:blog.locale.language' prefix='og: http://ogp.me/ns#'>
+<!-- Karasu-base.xml v1.0 | github.com/Karasu-themes/karasu-base -->
+<head>
+
+<!-- Title -->
+<title><data:view.title.escaped/></title>
+
+<!-- All head content () -->
+<b:include data='blog' name='all-head-content'/>
+
+<!-- Viewport -->
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+
+<!-- Sitelinks Searchbox -->
+<script type='application/ld+json'>
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": "<data:blog.homepageUrl.canonical/>",
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "<data:blog.searchUrl/>?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+    }
+}
+</script>
+
+<style>/*<![CDATA[*/
+/* Your css style*/
+/*]]>*/</style>
+
+<b:skin><![CDATA[
+/*=> Reset */
+widget-item-control,
+span.item-control.blog-admin,
+.item-control.blog-admin {
+	display: none;
+}
+
+/*=> Comment editor */
+#comment-editor {
+	border: 0;
+	outline: 0;
+	width: 100%;
+	min-height: 200px;}
+
+
+/*
+  	<!-- Variable definitions -->
+	<Variable name="body.background.color" description="Body background color" type="color" default="#fff"  value="#fff"/>
+
+	<!-- Comments System -->
+	<Variable name="config.commentsType" description="Comment system" type="string" default="disqus" value="disqus"/>
+	<Variable name="config.shortname" description="Shortname type="string" default="shortname" value="shortname"/>
+	<Variable name="config.fbID" description="App id facebook" type="string" default="fbID" value="fbID"/>
+*/
+
+]]></b:skin>
+
+<b:if cond='data:view.isLayoutMode'>
+<b:template-skin><![CDATA[
+/* Your layout style is goes here */
+]]></b:template-skin>
+</b:if>
+
+</head>
+<body>
+
+<b:section id="blog">
+
+	<b:widget id="Blog1" type="Blog">
+
+		<b:includable id='main' var='top'>
+
+			<!-- Loop -->
+
+			<b:if cond='data:view.isMultipleItems'>
+					<b:loop values='data:posts' var='post'>
+						<b:include name='post' data='post'/>
+					</b:loop>
+				<b:else/>
+					<b:loop values='data:posts' var='post'>
+						<b:include name='post' data='post'/>
+					</b:loop>
+			</b:if>
+			<!-- ./loop -->
+
+		</b:includable>
+
+		<b:includable id='post' var='post'>
+
+			<b:if cond='data:view.isMultipleItems'>
+
+				<!-- Agrega contenido para el home -->
+
+				<b:elseif cond='data:view.isPost'/>
+
+				<b:include name='commentAdd' />
+
+
+				<!-- Agrega contenido para las entradas -->
+
+				<b:elseif cond='data:view.isPage'/>
+
+				<!-- Agrega contenido para las páginas aquí -->
+
+			</b:if>
+
+		</b:includable>
+
+		<b:includable id="comment-system">
+			<b:include expr:name='"comment-" + data:skin.vars.config_commentsType'/>
+		</b:includable>
+
+		<b:includable id="comment-blogger">
+			<b:include name='commentsTitle'/>
+			<b:include name='commentPicker' data='post'/>
+		</b:includable>
+
+		<b:includable id="comment-disqus">
+            <div id="disqus_thread"></div>
+            <script>
+				var disqus_config = function(){
+					this.page.url = "<data:view.url.canonical/>";
+					this.page.title = "<data:view.title.escaped/>";};
+				(function() {
+					var d = document, s = d.createElement('script');
+					s.src = 'https://<data:skin.vars.config_shortname/>.disqus.com/embed.js';
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+				})();
+            </script>
+		</b:includable>
+
+		<b:includable id="comment-facebook">
+			<div id="fb-root"></div>
+			<b:if cond='data:skin.vars.config_commentsType == "facebook'>
+				<script async='async' defer='defer' crossorigin='anonymous' src='https://connect.facebook.net/es_LA/all.js#xfbml=1'></script>
+			</b:if>
+			<div class='fb-comments' expr:data-href='data:view.url.canonical' data-width='100%' data-numposts='5'></div>
+		</b:includable>
+
+		<b:includable id="commentPicker" var='post'>
+			<div class='comments threaded' expr:data-embed='data:post.embedCommentForm' expr:data-num-comments='data:post.numberOfComments' id='comments'>
+				<a name='comments'/>
+
+				<div class='comments-content'>
+					<div id='comment-holder'><data:post.commentHtml/></div>
+				</div>
+
+				<p class='comment-footer'>
+					<b:if cond='data:post.allowNewComments'>
+						<b:include data='post' name='threadedCommentForm'/>
+					<b:else/>
+						<data:post.noNewCommentsText/>
+					</b:if>
+				</p>
+			</div>
+		</b:includable>
+
+		<b:includable id="comments"><!--empty--></b:includable>
+
+		<b:includable id='threadedCommentForm' var='post'>
+		  <div class='comment-form'>
+		    <a name='comment-form'/>
+		    <b:include data='post' name='commentFormIframeSrc'/>
+		    <iframe class='blogger-iframe-colorize blogger-comment-from-post' id='comment-editor' name='comment-editor' src=''/>
+		    <data:post.cmtfpIframe/>
+		    <script type='text/javascript'>BLOG_CMT_createIframe('<data:post.appRpcRelayPath/>');</script>
+		  </div>
+		</b:includable>
+
+		<b:includable id='threadedCommentJs' var='post'>
+		  <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
+		    <b:template-script inline='true' name='threaded_comments'/>
+		    <script type='text/javascript'>
+		      blogger.widgets.blog.initThreadedComments(<data:post.commentJso/>, <data:post.commentMsgs/>, <data:post.commentConfig/>);
+		    </script>
+		</b:includable>
+
+		<b:includable id='paginationLink'><!--empty--></b:includable>
+
+	</b:widget>
+
+</b:section>
+
+<!-- Google Analytics -->
+<b:include data='blog' name='google-analytics'/>
+</body>
+</html>
