@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
 <html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.locale.languageDirection' expr:lang='data:blog.locale.language' prefix='og: http://ogp.me/ns#'>
-<!-- Karasu-base.xml v1.2.2 | github.com/Karasu-themes/karasu-base -->
+<!-- Karasu-base.xml v1.2.3 | github.com/Karasu-themes/karasu-base -->
 <head>
 
 <!-- Title -->
 <title><data:view.title.escaped/></title>
 
-<!-- All head content () -->
+<!-- All head content -->
 <b:include data='blog' name='all-head-content'/>
 
 <!-- Viewport -->
