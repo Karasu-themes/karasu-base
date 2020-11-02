@@ -41,19 +41,17 @@ span.item-control.blog-admin,
 
 /*=> Comment editor */
 #comment-editor {
-	border: 0;
-	outline: 0;
-	width: 100%;
-	min-height: 200px;}
+border: 0;
+outline: 0;
+width: 100%;
+min-height: 200px;}
 
 
 /*
-  	<!-- Variable definitions -->
-	<Variable name="body.background.color" description="Body background color" type="color" default="#fff"  value="#fff"/>
-
-	<!-- Comments System -->
-	<Variable name="config.comment" description="Comment system" type="string" default="disqus" value="disqus"/>
-	<Variable name="config.shortname" description="Shortname type="string" default="shortname" value="shortname"/>
+  	<!-- General -->
+	<Variable name="body.background.color" description="Theme color for Mobile" type="color" default="#fff"  value="#fff"/>
+	<Variable name="config.comment" description="Comment system" type="string" default="blogger" value="blogger"/>
+	<Variable name="config.shortname" description="Shortname" type="string" default="shortname" value="shortname"/>
 	<Variable name="config.fbID" description="App id facebook" type="string" default="fbID" value="fbID"/>
 */
 
@@ -75,7 +73,6 @@ span.item-control.blog-admin,
 		<b:includable id='main' var='top'>
 
 			<!-- Loop -->
-
 			<b:if cond='data:view.isMultipleItems'>
 					<b:loop values='data:posts' var='post'>
 						<b:include name='post' data='post'/>
@@ -84,8 +81,7 @@ span.item-control.blog-admin,
 					<b:loop values='data:posts' var='post'>
 						<b:include name='post' data='post'/>
 					</b:loop>
-			</b:if>
-			<!-- ./loop -->
+			</b:if><!-- ./loop -->
 
 		</b:includable>
 
@@ -97,7 +93,7 @@ span.item-control.blog-admin,
 
 				<b:elseif cond='data:view.isPost'/>
 
-				<b:include name='commentAdd' />
+				<b:include name='comments' />
 
 				<!-- Agrega contenido para las entradas -->
 
@@ -110,7 +106,6 @@ span.item-control.blog-admin,
 		</b:includable>
 
 		<b:includable id="comment-blogger">
-			<b:include name='commentsTitle'/>
 			<b:include name='commentPicker' data='post'/>
 		</b:includable>
 
@@ -137,11 +132,11 @@ span.item-control.blog-admin,
 		</b:includable>
 
 		<b:includable id='previousPageLink'>
-        	<b:tag name='tag' expr:href='data:olderPageUrl'><data:newerPageUrl/><data:newerPageTitle/></b:tag>
+        	<b:tag name='a' expr:href='data:newerPageUrl'><data:messages.newerPosts/></b:tag>
 		</b:includable>
 
         <b:includable id='nextPageLink'>
-        	<b:tag name='tag' expr:href='data:olderPageUrl'><data:olderPageTitle/></b:tag>
+        	<b:tag name='a' expr:href='data:olderPageUrl'><data:messages.olderPosts/></b:tag>
         </b:includable>
 
         <b:includable id='status-message'>
@@ -184,7 +179,8 @@ span.item-control.blog-admin,
 		    <b:include data='post' name='commentFormIframeSrc'/>
 		    <iframe class='blogger-iframe-colorize blogger-comment-from-post' id='comment-editor' name='comment-editor' src=''/>
 		    <data:post.cmtfpIframe/>
-		    <script type='text/javascript'>BLOG_CMT_createIframe('<data:post.appRpcRelayPath/>');</script>
+		    <script type='text/javascript'>BLOG_CMT_createIframe('<data:post.appRpcRelayPath/>');//<![CDATA[
+		    (function(){let img = document.querySelectorAll('.avatar-image-container img');for (var i = 0; i < img.length; i++) {let imgPath = img[i].getAttribute('src');img[i].setAttribute('src', imgPath.replace(/s\B\d{2,4}/,"s56"));}})();//]]></script>
 		  </div>
 		</b:includable>
 
