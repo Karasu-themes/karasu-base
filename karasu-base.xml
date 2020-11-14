@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
 <html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.locale.languageDirection' expr:lang='data:blog.locale.language' prefix='og: http://ogp.me/ns#'>
-<!-- Karasu-base.xml v1.2.3 | github.com/Karasu-themes/karasu-base -->
+<!-- Karasu-base.xml v1.2.5 | github.com/Karasu-themes/karasu-base -->
 <head>
 
 <!-- Title -->
@@ -66,9 +66,9 @@ min-height: 200px;}
 </head>
 <body>
 
-<b:section id="blog">
+<b:section id='blog'>
 
-	<b:widget id="Blog1" type="Blog">
+	<b:widget id='Blog1' type='Blog'>
 
 		<b:includable id='main' var='top'>
 
@@ -77,6 +77,8 @@ min-height: 200px;}
 					<b:loop values='data:posts' var='post'>
 						<b:include name='post' data='post'/>
 					</b:loop>
+
+					<b:include name='postPagination'/> <!-- Pagination -->
 				<b:else/>
 					<b:loop values='data:posts' var='post'>
 						<b:include name='post' data='post'/>
@@ -86,27 +88,25 @@ min-height: 200px;}
 		</b:includable>
 
 		<b:includable id='post' var='post'>
-
 			<b:if cond='data:view.isMultipleItems'>
 
-				<!-- Agrega contenido para el home -->
+				<!-- Multiple items here -->
 
 				<b:elseif cond='data:view.isPost'/>
 
-				<b:include name='comments' />
+        <!-- single items here -->
 
-				<!-- Agrega contenido para las entradas -->
+				<b:include name='comments' /> <!-- Comments -->
 
 				<b:elseif cond='data:view.isPage'/>
 
-				<!-- Agrega contenido para las páginas aquí -->
+				<!-- Page items here -->
 
 			</b:if>
-
 		</b:includable>
 
 		<b:includable id="comment-blogger">
-			<b:include name='commentPicker' data='post'/>
+		  <b:include name='commentPicker' data='post'/>
 		</b:includable>
 
 		<b:includable id="comment-disqus">
@@ -125,27 +125,27 @@ min-height: 200px;}
 		</b:includable>
 
 		<b:includable id='postPagination'>
-		  <div class='blog-pager container' id='blog-pager'>
+		  <div class='blog-pager' id='blog-pager'>
 		    <b:include cond='data:newerPageUrl' name='previousPageLink'/>
 		    <b:include cond='data:olderPageUrl' name='nextPageLink'/>
 		  </div>
 		</b:includable>
 
 		<b:includable id='previousPageLink'>
-        	<b:tag name='a' expr:href='data:newerPageUrl'><data:messages.newerPosts/></b:tag>
+      <b:tag name='a' expr:href='data:newerPageUrl'><data:messages.newerPosts/></b:tag>
 		</b:includable>
 
-        <b:includable id='nextPageLink'>
-        	<b:tag name='a' expr:href='data:olderPageUrl'><data:messages.olderPosts/></b:tag>
-        </b:includable>
+    <b:includable id='nextPageLink'>
+      <b:tag name='a' expr:href='data:olderPageUrl'><data:messages.olderPosts/></b:tag>
+    </b:includable>
 
-        <b:includable id='status-message'>
-        	<b:tag name='div' class='query-box'><data:navMessage/></b:tag>
-        </b:includable>
+    <b:includable id='status-message'>
+      <b:tag name='div' class='query-box'><data:navMessage/></b:tag>
+    </b:includable>
 
 		<b:includable id="comment-facebook">
 			<div id="fb-root"></div>
-			<b:if cond='data:skin.vars.config_comment == "facebook'>
+			<b:if cond='data:skin.vars.config_comment == "facebook"'>
 				<script async='async' defer='defer' crossorigin='anonymous' src='https://connect.facebook.net/es_LA/all.js#xfbml=1'></script>
 			</b:if>
 			<div class='fb-comments' expr:data-href='data:view.url.canonical' data-width='100%' data-numposts='5'></div>
@@ -159,7 +159,7 @@ min-height: 200px;}
 					<div id='comment-holder'><data:post.commentHtml/></div>
 				</div>
 
-				<p class='comment-footer'>
+				<p class='comment-footer alert'>
 					<b:if cond='data:post.allowNewComments'>
 						<b:include data='post' name='threadedCommentForm'/>
 					<b:else/>
