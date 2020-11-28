@@ -1,0 +1,2757 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.locale.languageDirection' expr:lang='data:blog.locale.language' prefix='og: http://ogp.me/ns#'>
+<!-- Hominen @ v1.0 Free - Karasu-base.xml v1.2.5 (github.com/Karasu-themes/karasu-base) -->
+<head>
+
+<!-- Title -->
+<title><data:view.title.escaped/></title>
+
+<!-- All head content -->
+<b:include data='blog' name='all-head-content'/>
+
+<!-- Viewport -->
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+
+<!-- Sitelinks Searchbox -->
+<script type='application/ld+json'>
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": "<data:blog.homepageUrl.canonical/>",
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "<data:blog.searchUrl/>?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+    }
+}
+</script>
+
+<b:if cond='data:view.isSingleItem'>
+<style>/*<![CDATA[*/
+/*!
+*=> Comments Bundle v1.0.10 | GNU 3.0 License | github.com/zkreations/bundle/blob/master/LICENSE
+*-------------------------------------------------------------------------------------*/
+@font-face{font-family:bundle;src:url(https://cdn.jsdelivr.net/gh/zkreations/bundle@1.0.10/fonts/bundle.eot?#iefix) format("embedded-opentype"),url(https://cdn.jsdelivr.net/gh/zkreations/bundle@1.0.10/fonts/bundle.woff) format("woff");font-weight:400;font-style:normal}.comments .comment-content,.comments a,.comments li,.comments ol{background:none transparent;padding:0;margin:0;border:none;outline:0;box-shadow:0 0 transparent;font:inherit;vertical-align:baseline;list-style-type:none;text-align:left;text-decoration:none}.comments .comment-thread li::after{content:"";clear:both;display:block}.comments .avatar-image-container{background-size:cover;float:left;overflow:hidden}.comments .avatar-image-container img{width:100%}.comments .comment-replies .avatar-image-container{width:38px;height:38px}.comments .thread-toggle{z-index:40}.comments .thread-toggle a{display:inline-block;position:relative;line-height:1}.comments .thread-toggle a::before{font-family:bundle!important;font-style:normal!important;font-weight:400!important;font-variant:normal!important;text-transform:none!important;speak:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:block}.comments .deleted-comment{display:block}/*]]>*/
+</style>
+</b:if>
+
+<style>/*<![CDATA[*/
+
+/*! Google fonts (github.com/google/fonts) */
+@font-face{font-family:Oswald;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/oswald/v35/TK3_WkUHHAIjg75cFRf3bXL8LICs1xZosUhiZTaR.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Oswald;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/oswald/v35/TK3_WkUHHAIjg75cFRf3bXL8LICs1xZosUZiZQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Roboto;font-style:normal;font-weight:300;font-display:swap;src:local('Roboto Light'),local('Roboto-Light'),url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:300;font-display:swap;src:local('Roboto Light'),local('Roboto-Light'),url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:local('Roboto'),local('Roboto-Regular'),url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:local('Roboto'),local('Roboto-Regular'),url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Roboto;font-style:normal;font-weight:500;font-display:swap;src:local('Roboto Medium'),local('Roboto-Medium'),url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:500;font-display:swap;src:local('Roboto Medium'),local('Roboto-Medium'),url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Roboto;font-style:normal;font-weight:700;font-display:swap;src:local('Roboto Bold'),local('Roboto-Bold'),url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:700;font-display:swap;src:local('Roboto Bold'),local('Roboto-Bold'),url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+/*
+* LAYOUT
+-------------- */
+
+.c1{width:8.33333%}.c2{width:16.66667%}.c3{width:25%}.c4{width:33.33333%}.c5{width:41.66667%}.c6{width:50%}.c7{width:58.33333%}.c8{width:66.66667%}.c9{width:75%}.c10{width:83.33333%}.c11{width:91.66667%}.c12{width:100%}@media screen and (min-width:480px){.c1-xs{width:8.33333%}.c2-xs{width:16.66667%}.c3-xs{width:25%}.c4-xs{width:33.33333%}.c5-xs{width:41.66667%}.c6-xs{width:50%}.c7-xs{width:58.33333%}.c8-xs{width:66.66667%}.c9-xs{width:75%}.c10-xs{width:83.33333%}.c11-xs{width:91.66667%}.c12-xs{width:100%}}@media screen and (min-width:576px){.c1-sm{width:8.33333%}.c2-sm{width:16.66667%}.c3-sm{width:25%}.c4-sm{width:33.33333%}.c5-sm{width:41.66667%}.c6-sm{width:50%}.c7-sm{width:58.33333%}.c8-sm{width:66.66667%}.c9-sm{width:75%}.c10-sm{width:83.33333%}.c11-sm{width:91.66667%}.c12-sm{width:100%}}@media screen and (min-width:768px){.c1-md{width:8.33333%}.c2-md{width:16.66667%}.c3-md{width:25%}.c4-md{width:33.33333%}.c5-md{width:41.66667%}.c6-md{width:50%}.c7-md{width:58.33333%}.c8-md{width:66.66667%}.c9-md{width:75%}.c10-md{width:83.33333%}.c11-md{width:91.66667%}.c12-md{width:100%}}@media screen and (min-width:992px){.c1-lg{width:8.33333%}.c2-lg{width:16.66667%}.c3-lg{width:25%}.c4-lg{width:33.33333%}.c5-lg{width:41.66667%}.c6-lg{width:50%}.c7-lg{width:58.33333%}.c8-lg{width:66.66667%}.c9-lg{width:75%}.c10-lg{width:83.33333%}.c11-lg{width:91.66667%}.c12-lg{width:100%}}@media screen and (min-width:1200px){.c1-xlg{width:8.33333%}.c2-xlg{width:16.66667%}.c3-xlg{width:25%}.c4-xlg{width:33.33333%}.c5-xlg{width:41.66667%}.c6-xlg{width:50%}.c7-xlg{width:58.33333%}.c8-xlg{width:66.66667%}.c9-xlg{width:75%}.c10-xlg{width:83.33333%}.c11-xlg{width:91.66667%}.c12-xlg{width:100%}}.w5{width:5%}.w10{width:10%}.w15{width:15%}.w20{width:20%}.w25{width:25%}.w30{width:30%}.w35{width:35%}.w40{width:40%}.w45{width:45%}.w50{width:50%}.w55{width:55%}.w60{width:60%}.w65{width:65%}.w70{width:70%}.w75{width:75%}.w80{width:80%}.w85{width:85%}.w90{width:90%}.w95{width:95%}.w100{width:100%}@media screen and (min-width:480px){.w5-xs{width:5%}.w10-xs{width:10%}.w15-xs{width:15%}.w20-xs{width:20%}.w25-xs{width:25%}.w30-xs{width:30%}.w35-xs{width:35%}.w40-xs{width:40%}.w45-xs{width:45%}.w50-xs{width:50%}.w55-xs{width:55%}.w60-xs{width:60%}.w65-xs{width:65%}.w70-xs{width:70%}.w75-xs{width:75%}.w80-xs{width:80%}.w85-xs{width:85%}.w90-xs{width:90%}.w95-xs{width:95%}.w100-xs{width:100%}}@media screen and (min-width:576px){.w5-sm{width:5%}.w10-sm{width:10%}.w15-sm{width:15%}.w20-sm{width:20%}.w25-sm{width:25%}.w30-sm{width:30%}.w35-sm{width:35%}.w40-sm{width:40%}.w45-sm{width:45%}.w50-sm{width:50%}.w55-sm{width:55%}.w60-sm{width:60%}.w65-sm{width:65%}.w70-sm{width:70%}.w75-sm{width:75%}.w80-sm{width:80%}.w85-sm{width:85%}.w90-sm{width:90%}.w95-sm{width:95%}.w100-sm{width:100%}}@media screen and (min-width:768px){.w5-md{width:5%}.w10-md{width:10%}.w15-md{width:15%}.w20-md{width:20%}.w25-md{width:25%}.w30-md{width:30%}.w35-md{width:35%}.w40-md{width:40%}.w45-md{width:45%}.w50-md{width:50%}.w55-md{width:55%}.w60-md{width:60%}.w65-md{width:65%}.w70-md{width:70%}.w75-md{width:75%}.w80-md{width:80%}.w85-md{width:85%}.w90-md{width:90%}.w95-md{width:95%}.w100-md{width:100%}}@media screen and (min-width:992px){.w5-lg{width:5%}.w10-lg{width:10%}.w15-lg{width:15%}.w20-lg{width:20%}.w25-lg{width:25%}.w30-lg{width:30%}.w35-lg{width:35%}.w40-lg{width:40%}.w45-lg{width:45%}.w50-lg{width:50%}.w55-lg{width:55%}.w60-lg{width:60%}.w65-lg{width:65%}.w70-lg{width:70%}.w75-lg{width:75%}.w80-lg{width:80%}.w85-lg{width:85%}.w90-lg{width:90%}.w95-lg{width:95%}.w100-lg{width:100%}}@media screen and (min-width:1200px){.w5-xlg{width:5%}.w10-xlg{width:10%}.w15-xlg{width:15%}.w20-xlg{width:20%}.w25-xlg{width:25%}.w30-xlg{width:30%}.w35-xlg{width:35%}.w40-xlg{width:40%}.w45-xlg{width:45%}.w50-xlg{width:50%}.w55-xlg{width:55%}.w60-xlg{width:60%}.w65-xlg{width:65%}.w70-xlg{width:70%}.w75-xlg{width:75%}.w80-xlg{width:80%}.w85-xlg{width:85%}.w90-xlg{width:90%}.w95-xlg{width:95%}.w100-xlg{width:100%}}.layout.is-box{width:100%;max-width:1200px}.layout.is-fluid{width:100%}.layout.is-auto{margin-left:auto;margin-right:auto}.layout.is-reverse{flex-direction:row-reverse}.layout .layout-main{width:100%}.layout.is-2column .layout-column,.layout.is-2column .layout-main{width:100%}@media screen and (min-width:992px){.layout.is-2column .layout-column{width:300px}.layout.is-2column .layout-main{width:calc(100% - 300px)}}.layout.is-3column .layout-column,.layout.is-3column .layout-main{width:100%}@media screen and (min-width:992px){.layout.is-3column .layout-column{width:250px}.layout.is-3column .layout-main{width:calc(100% - 500px)}}.panel{position:fixed;left:0;top:0;width:100%;height:100%}.panel-center,.panel-content,.panel-left{height:100%}.panel-content{overflow-y:auto}.panel-left{position:absolute;left:0;top:0;width:90%;max-width:280px;transform:translateX(-100%);transition:transform .3s;z-index:1001}.panel.is-active .panel-left{transform:translateX(0)}.panel-center{width:100%}@media screen and (min-width:992px){.panel-left{position:relative;transform:translateX(0);transition:0s}.panel-center{width:calc(100% - 280px)}}
+
+/*
+* HELPER
+-------------- */
+.align-left{text-align:left}@media screen and (min-width:480px){.align-left-xs{text-align:left}}@media screen and (min-width:576px){.align-left-sm{text-align:left}}@media screen and (min-width:768px){.align-left-md{text-align:left}}@media screen and (min-width:992px){.align-left-lg{text-align:left}}@media screen and (min-width:1200px){.align-left-xlg{text-align:left}}.align-center{text-align:center}@media screen and (min-width:480px){.align-center-xs{text-align:center}}@media screen and (min-width:576px){.align-center-sm{text-align:center}}@media screen and (min-width:768px){.align-center-md{text-align:center}}@media screen and (min-width:992px){.align-center-lg{text-align:center}}@media screen and (min-width:1200px){.align-center-xlg{text-align:center}}.align-right{text-align:right}@media screen and (min-width:480px){.align-right-xs{text-align:right}}@media screen and (min-width:576px){.align-right-sm{text-align:right}}@media screen and (min-width:768px){.align-right-md{text-align:right}}@media screen and (min-width:992px){.align-right-lg{text-align:right}}@media screen and (min-width:1200px){.align-right-xlg{text-align:right}}.ani{animation-duration:.2s}.ani-fadeIn{animation-name:fadeIn}.ani-fadeInTop{animation-name:fadeInTop}.ani-fadeInLeft{animation-name:fadeInLeft}.ani-fadeInBottom{animation-name:fadeInBottom}.ani-fadeInRight{animation-name:fadeInRight}.ani-fadeInRotate{animation-name:fadeInRotate}.ani-fadeInRotateX{animation-name:fadeInRotateX}.ani-fadeInRotateY{animation-name:fadeInRotateY}.ani-fadeInScale{animation-name:fadeInScale}.ani-fadeInScaleX{animation-name:fadeInScaleX}.ani-fadeInScaleY{animation-name:fadeInScaleY}.ani-fadeOut{animation-name:fadeOut}.ani-fadeOutTop{animation-name:fadeOutTop}.ani-fadeOutLeft{animation-name:fadeOutLeft}.ani-fadeOutBottom{animation-name:fadeOutBottom}.ani-fadeOutRight{animation-name:fadeOutRight}.ani-fadeOutRotate{animation-name:fadeOutRotate}.ani-fadeOutRotateX{animation-name:fadeOutRotateX}.ani-fadeOutRotateY{animation-name:fadeOutRotateY}.ani-fadeOutScale{animation-name:fadeOutScale}.ani-fadeOutScaleX{animation-name:fadeOutScaleX}.ani-fadeOutScaleY{animation-name:fadeOutScaleY}.ani-fadePulse{animation-name:fadePulse;animation-iteration-count:infinite}.ani-scalePulse{animation-name:scalePulse;animation-iteration-count:infinite}.ani-scalePulseY{animation-name:scalePulseY;animation-iteration-count:infinite}.ani-scalePulseX{animation-name:scalePulseX;animation-iteration-count:infinite}.ani-rotatePulse{animation-name:rotatePulse;animation-iteration-count:infinite}.ani-rotatePulseX{animation-name:rotatePulseX;animation-iteration-count:infinite}.ani-rotatePulseY{animation-name:rotatePulseY;animation-iteration-count:infinite}.ani-rotatePulse90{animation-name:rotatePulse90;animation-iteration-count:infinite}.ani-rotatePulse180{animation-name:rotatePulse180;animation-iteration-count:infinite}.ani-rotatePulse360{animation-name:rotatePulse360;animation-iteration-count:infinite}.ani-lt{transform-origin:left top}.ani-mt{transform-origin:center top}.ani-rt{transform-origin:right top}.ani-lb{transform-origin:left bottom}.ani-mb{transform-origin:center bottom}.ani-rb{transform-origin:right bottom}.ani-02s{animation-duration:.2s}.ani-05s{animation-duration:.5s}.ani-07s{animation-duration:.7s}.ani-1s{animation-duration:1s}.ani-12s{animation-duration:1.2s}.ani-15s{animation-duration:1.5s}.ani-slow{animation-duration:2s}.ani-fast{animation-duration:.3s}.ani-infinite{animation-iteration-count:infinite}.ani-delay-02s{animation-delay:.2s}.ani-delay-05s{animation-delay:.5s}.ani-delay-07s{animation-delay:.7s}.ani-delay-1s{animation-delay:1s}.ani-delay-12s{animation-delay:1.2s}.ani-delay-15s{animation-delay:1.5s}.ani-linear{animation-timing-function:linear}.ani-ease{animation-timing-function:ease}.ani-ease-in{animation-timing-function:ease-in}.ani-ease-out{animation-timing-function:ease-out}.ani-ease-in-out{animation-timing-function:ease-in-out}.ani-forwards{animation-fill-mode:forwards}.ani-backwards{animation-fill-mode:backwards}.ani-both{animation-fill-mode:both}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeInTop{from{transform:translateY(-10px);opacity:0}to{transform:translateY(0);opacity:1}}@keyframes fadeInRight{from{transform:translateX(10px);opacity:0}to{transform:translateX(0);opacity:1}}@keyframes fadeInBottom{from{transform:translateY(10px);opacity:0}to{transform:translateY(0);opacity:1}}@keyframes fadeInLeft{from{transform:translateX(-10px);opacity:0}to{transform:translateX(0);opacity:1}}@keyframes fadeInRotate{from{transform:rotate(90deg);opacity:0}to{transform:deg(0);opacity:1}}@keyframes fadeInRotateX{from{transform:rotateX(90deg);opacity:0}to{transform:rotateX(0);opacity:1}}@keyframes fadeInRotateY{from{transform:rotateY(90deg);opacity:0}to{transform:rotateY(0);opacity:1}}@keyframes fadeInScale{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}@keyframes fadeInScaleY{from{transform:scale(1,0);opacity:0}to{transform:scale(1);opacity:1}}@keyframes fadeInScaleX{from{transform:scale(0,1);opacity:0}to{transform:scale(1);opacity:1}}@keyframes fadeOut{from{opacity:1}to{opacity:0}}@keyframes fadeOutTop{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-10px)}}@keyframes fadeOutRight{from{opacity:1;transform:translateX(0)}to{opacity:0;transform:translateX(10px)}}@keyframes fadeOutBottom{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(10px)}}@keyframes fadeOutLeft{from{opacity:1;transform:translateX(0)}to{opacity:0;transform:translateX(-10px)}}@keyframes fadeOutRotate{from{transform:rotate(0);opacity:1}to{transform:rotate(-90deg);opacity:0}}@keyframes fadeOutRotateX{from{transform:rotateX(0);opacity:1}to{transform:rotateX(-90deg);opacity:0}}@keyframes fadeOutRotateY{from{transform:rotateY(0);opacity:1}to{transform:rotateY(-90deg);opacity:0}}@keyframes fadeOutScale{from{transform:scale(1);opacity:1}to{transform:scale(0);opacity:0}}@keyframes fadeOutScaleY{from{transform:scale(1);opacity:1}to{transform:scale(1,0);opacity:0}}@keyframes fadeOutScaleX{from{transform:scale(1);opacity:1}to{transform:scale(0,1);opacity:0}}@keyframes fadePulse{0%{opacity:1}50%{opacity:0}100%{opacity:1}}@keyframes scalePulse{0%{transform:scale(.8)}50%{transform:scale(1)}100%{transform:scale(.8)}}@keyframes scalePulseY{0%{transform:scale(1,.3)}50%{transform:scale(1)}100%{transform:scale(1,.3)}}@keyframes scalePulseX{0%{transform:scale(.3,1)}50%{transform:scale(1)}100%{transform:scale(.3,1)}}@keyframes rotatePulse{0%{transform:rotate(0)}25%{transform:rotate(-45deg)}50%{transform:rotate(0)}75%{transform:rotate(45deg)}100%{transform:rotate(0)}}@keyframes rotatePulseX{0%{transform:rotateX(0)}25%{transform:rotateX(-90deg)}50%{transform:rotateX(0)}75%{transform:rotateX(90deg)}100%{transform:rotateX(0)}}@keyframes rotatePulseY{0%{transform:rotateY(0)}25%{transform:rotateY(-90deg)}50%{transform:rotateY(0)}75%{transform:rotateY(90deg)}100%{transform:rotateY(0)}}@keyframes rotatePulse90{0%{transform:rotate(0)}25%{transform:rotate(-90deg)}50%{transform:rotate(0)}75%{transform:rotate(90deg)}100%{transform:rotate(0)}}@keyframes rotatePulse180{0%{transform:rotate(0)}25%{transform:rotate(-180deg)}50%{transform:rotate(0)}75%{transform:rotate(180deg)}100%{transform:rotate(0)}}@keyframes rotatePulse360{0%{transform:rotate(0)}25%{transform:rotate(-360deg)}50%{transform:rotate(0)}75%{transform:rotate(360deg)}100%{transform:rotate(0)}}.d-inline{display:inline}@media screen and (min-width:480px){.d-inline-xs{display:inline}}@media screen and (min-width:576px){.d-inline-sm{display:inline}}@media screen and (min-width:768px){.d-inline-md{display:inline}}@media screen and (min-width:992px){.d-inline-lg{display:inline}}@media screen and (min-width:1200px){.d-inline-xlg{display:inline}}.d-block{display:block}@media screen and (min-width:480px){.d-block-xs{display:block}}@media screen and (min-width:576px){.d-block-sm{display:block}}@media screen and (min-width:768px){.d-block-md{display:block}}@media screen and (min-width:992px){.d-block-lg{display:block}}@media screen and (min-width:1200px){.d-block-xlg{display:block}}.d-iblock{display:inline-block}@media screen and (min-width:480px){.d-iblock-xs{display:inline-block}}@media screen and (min-width:576px){.d-iblock-sm{display:inline-block}}@media screen and (min-width:768px){.d-iblock-md{display:inline-block}}@media screen and (min-width:992px){.d-iblock-lg{display:inline-block}}@media screen and (min-width:1200px){.d-iblock-xlg{display:inline-block}}.d-flex{display:flex}@media screen and (min-width:480px){.d-flex-xs{display:flex}}@media screen and (min-width:576px){.d-flex-sm{display:flex}}@media screen and (min-width:768px){.d-flex-md{display:flex}}@media screen and (min-width:992px){.d-flex-lg{display:flex}}@media screen and (min-width:1200px){.d-flex-xlg{display:flex}}.d-iflex{display:inline-flex}@media screen and (min-width:480px){.d-iflex-xs{display:inline-flex}}@media screen and (min-width:576px){.d-iflex-sm{display:inline-flex}}@media screen and (min-width:768px){.d-iflex-md{display:inline-flex}}@media screen and (min-width:992px){.d-iflex-lg{display:inline-flex}}@media screen and (min-width:1200px){.d-iflex-xlg{display:inline-flex}}.embed{position:relative;left:0;top:0;width:100%;padding-top:100%;display:block;border-radius:8px;overflow:hidden}.embed.aspect-3\:2{padding-top:66.66667%}.embed.aspect-4\:3{padding-top:75%}.embed.aspect-16\:9{padding-top:56.25%}.embed iframe,.embed video{position:absolute;left:0;top:0;width:100%;height:100%;border:0}.embed-extended{position:relative;width:calc(100% + 32px);left:-16px}.embed-extended .embed{border-radius:0}.m4{margin:4px}.m4-t{margin-top:4px}.m4-r{margin-right:4px}.m4-b{margin-bottom:4px}.m4-l{margin-left:4px}.m4-y{margin-top:4px;margin-bottom:4px}.m4-x{margin-left:4px;margin-right:4px}.m8{margin:8px}.m8-t{margin-top:8px}.m8-r{margin-right:8px}.m8-b{margin-bottom:8px}.m8-l{margin-left:8px}.m8-y{margin-top:8px;margin-bottom:8px}.m8-x{margin-left:8px;margin-right:8px}.m12{margin:12px}.m12-t{margin-top:12px}.m12-r{margin-right:12px}.m12-b{margin-bottom:12px}.m12-l{margin-left:12px}.m12-y{margin-top:12px;margin-bottom:12px}.m12-x{margin-left:12px;margin-right:12px}.m16{margin:16px}.m16-t{margin-top:16px}.m16-r{margin-right:16px}.m16-b{margin-bottom:16px}.m16-l{margin-left:16px}.m16-y{margin-top:16px;margin-bottom:16px}.m16-x{margin-left:16px;margin-right:16px}.m20{margin:20px}.m20-t{margin-top:20px}.m20-r{margin-right:20px}.m20-b{margin-bottom:20px}.m20-l{margin-left:20px}.m20-y{margin-top:20px;margin-bottom:20px}.m20-x{margin-left:20px;margin-right:20px}.m24{margin:24px}.m24-t{margin-top:24px}.m24-r{margin-right:24px}.m24-b{margin-bottom:24px}.m24-l{margin-left:24px}.m24-y{margin-top:24px;margin-bottom:24px}.m24-x{margin-left:24px;margin-right:24px}.m28{margin:28px}.m28-t{margin-top:28px}.m28-r{margin-right:28px}.m28-b{margin-bottom:28px}.m28-l{margin-left:28px}.m28-y{margin-top:28px;margin-bottom:28px}.m28-x{margin-left:28px;margin-right:28px}.m32{margin:32px}.m32-t{margin-top:32px}.m32-r{margin-right:32px}.m32-b{margin-bottom:32px}.m32-l{margin-left:32px}.m32-y{margin-top:32px;margin-bottom:32px}.m32-x{margin-left:32px;margin-right:32px}.m36{margin:36px}.m36-t{margin-top:36px}.m36-r{margin-right:36px}.m36-b{margin-bottom:36px}.m36-l{margin-left:36px}.m36-y{margin-top:36px;margin-bottom:36px}.m36-x{margin-left:36px;margin-right:36px}.m40{margin:40px}.m40-t{margin-top:40px}.m40-r{margin-right:40px}.m40-b{margin-bottom:40px}.m40-l{margin-left:40px}.m40-y{margin-top:40px;margin-bottom:40px}.m40-x{margin-left:40px;margin-right:40px}.m44{margin:44px}.m44-t{margin-top:44px}.m44-r{margin-right:44px}.m44-b{margin-bottom:44px}.m44-l{margin-left:44px}.m44-y{margin-top:44px;margin-bottom:44px}.m44-x{margin-left:44px;margin-right:44px}.m48{margin:48px}.m48-t{margin-top:48px}.m48-r{margin-right:48px}.m48-b{margin-bottom:48px}.m48-l{margin-left:48px}.m48-y{margin-top:48px;margin-bottom:48px}.m48-x{margin-left:48px;margin-right:48px}.m-auto{margin-left:auto;margin-right:auto}.m0{margin:0}.m0-t{margin-top:0}.m0-r{margin-right:0}.m0-b{margin-bottom:0}.m0-l{margin-left:0}.m0-x{margin-left:0;margin-right:0}.m0-y{margin-top:0;margin-bottom:0}.p4{padding:4px}.p4-t{padding-top:4px}.p4-r{padding-right:4px}.p4-b{padding-bottom:4px}.p4-l{padding-left:4px}.p4-y{padding-top:4px;padding-bottom:4px}.p4-x{padding-left:4px;padding-right:4px}.p8{padding:8px}.p8-t{padding-top:8px}.p8-r{padding-right:8px}.p8-b{padding-bottom:8px}.p8-l{padding-left:8px}.p8-y{padding-top:8px;padding-bottom:8px}.p8-x{padding-left:8px;padding-right:8px}.p12{padding:12px}.p12-t{padding-top:12px}.p12-r{padding-right:12px}.p12-b{padding-bottom:12px}.p12-l{padding-left:12px}.p12-y{padding-top:12px;padding-bottom:12px}.p12-x{padding-left:12px;padding-right:12px}.p16{padding:16px}.p16-t{padding-top:16px}.p16-r{padding-right:16px}.p16-b{padding-bottom:16px}.p16-l{padding-left:16px}.p16-y{padding-top:16px;padding-bottom:16px}.p16-x{padding-left:16px;padding-right:16px}.p20{padding:20px}.p20-t{padding-top:20px}.p20-r{padding-right:20px}.p20-b{padding-bottom:20px}.p20-l{padding-left:20px}.p20-y{padding-top:20px;padding-bottom:20px}.p20-x{padding-left:20px;padding-right:20px}.p24{padding:24px}.p24-t{padding-top:24px}.p24-r{padding-right:24px}.p24-b{padding-bottom:24px}.p24-l{padding-left:24px}.p24-y{padding-top:24px;padding-bottom:24px}.p24-x{padding-left:24px;padding-right:24px}.p28{padding:28px}.p28-t{padding-top:28px}.p28-r{padding-right:28px}.p28-b{padding-bottom:28px}.p28-l{padding-left:28px}.p28-y{padding-top:28px;padding-bottom:28px}.p28-x{padding-left:28px;padding-right:28px}.p32{padding:32px}.p32-t{padding-top:32px}.p32-r{padding-right:32px}.p32-b{padding-bottom:32px}.p32-l{padding-left:32px}.p32-y{padding-top:32px;padding-bottom:32px}.p32-x{padding-left:32px;padding-right:32px}.p36{padding:36px}.p36-t{padding-top:36px}.p36-r{padding-right:36px}.p36-b{padding-bottom:36px}.p36-l{padding-left:36px}.p36-y{padding-top:36px;padding-bottom:36px}.p36-x{padding-left:36px;padding-right:36px}.p40{padding:40px}.p40-t{padding-top:40px}.p40-r{padding-right:40px}.p40-b{padding-bottom:40px}.p40-l{padding-left:40px}.p40-y{padding-top:40px;padding-bottom:40px}.p40-x{padding-left:40px;padding-right:40px}.p44{padding:44px}.p44-t{padding-top:44px}.p44-r{padding-right:44px}.p44-b{padding-bottom:44px}.p44-l{padding-left:44px}.p44-y{padding-top:44px;padding-bottom:44px}.p44-x{padding-left:44px;padding-right:44px}.p48{padding:48px}.p48-t{padding-top:48px}.p48-r{padding-right:48px}.p48-b{padding-bottom:48px}.p48-l{padding-left:48px}.p48-y{padding-top:48px;padding-bottom:48px}.p48-x{padding-left:48px;padding-right:48px}.p0{padding:0}.p0-t{padding-top:0}.p0-r{padding-right:0}.p0-b{padding-bottom:0}.p0-l{padding-left:0}.p0-x{padding-left:0;padding-right:0}.p0-y{padding-top:0;padding-bottom:0}.pos-relative{position:relative}@media screen and (min-width:480px){.pos-relative-xs{position:relative}}@media screen and (min-width:576px){.pos-relative-sm{position:relative}}@media screen and (min-width:768px){.pos-relative-md{position:relative}}@media screen and (min-width:992px){.pos-relative-lg{position:relative}}@media screen and (min-width:1200px){.pos-relative-xlg{position:relative}}.pos-absolute{position:absolute}@media screen and (min-width:480px){.pos-absolute-xs{position:absolute}}@media screen and (min-width:576px){.pos-absolute-sm{position:absolute}}@media screen and (min-width:768px){.pos-absolute-md{position:absolute}}@media screen and (min-width:992px){.pos-absolute-lg{position:absolute}}@media screen and (min-width:1200px){.pos-absolute-xlg{position:absolute}}.pos-fixed{position:fixed}@media screen and (min-width:480px){.pos-fixed-xs{position:fixed}}@media screen and (min-width:576px){.pos-fixed-sm{position:fixed}}@media screen and (min-width:768px){.pos-fixed-md{position:fixed}}@media screen and (min-width:992px){.pos-fixed-lg{position:fixed}}@media screen and (min-width:1200px){.pos-fixed-xlg{position:fixed}}.pos-left{left:0}.pos-left-100{left:100%}.pos-right{right:0}.pos-right-100{right:100%}.pos-top{top:0}.pos-top-100{top:100%}.pos-bottom{bottom:0}.pos-bottom-100{bottom:100%}.f-wrap{flex-wrap:wrap}@media screen and (min-width:480px){.f-wrap-xs{flex-wrap:wrap}}@media screen and (min-width:576px){.f-wrap-sm{flex-wrap:wrap}}@media screen and (min-width:768px){.f-wrap-md{flex-wrap:wrap}}@media screen and (min-width:992px){.f-wrap-lg{flex-wrap:wrap}}@media screen and (min-width:1200px){.f-wrap-xlg{flex-wrap:wrap}}.f-nwrap{flex-wrap:nowrap}@media screen and (min-width:480px){.f-nwrap-xs{flex-wrap:nowrap}}@media screen and (min-width:576px){.f-nwrap-sm{flex-wrap:nowrap}}@media screen and (min-width:768px){.f-nwrap-md{flex-wrap:nowrap}}@media screen and (min-width:992px){.f-nwrap-lg{flex-wrap:nowrap}}@media screen and (min-width:1200px){.f-nwrap-xlg{flex-wrap:nowrap}}.j-content-start{justify-content:flex-start}@media screen and (min-width:480px){.j-content-start-xs{justify-content:flex-start}}@media screen and (min-width:576px){.j-content-start-sm{justify-content:flex-start}}@media screen and (min-width:768px){.j-content-start-md{justify-content:flex-start}}@media screen and (min-width:992px){.j-content-start-lg{justify-content:flex-start}}@media screen and (min-width:1200px){.j-content-start-xlg{justify-content:flex-start}}.j-content-end{justify-content:flex-end}@media screen and (min-width:480px){.j-content-end-xs{justify-content:flex-end}}@media screen and (min-width:576px){.j-content-end-sm{justify-content:flex-end}}@media screen and (min-width:768px){.j-content-end-md{justify-content:flex-end}}@media screen and (min-width:992px){.j-content-end-lg{justify-content:flex-end}}@media screen and (min-width:1200px){.j-content-end-xlg{justify-content:flex-end}}.j-content-around{justify-content:space-around}@media screen and (min-width:480px){.j-content-around-xs{justify-content:space-around}}@media screen and (min-width:576px){.j-content-around-sm{justify-content:space-around}}@media screen and (min-width:768px){.j-content-around-md{justify-content:space-around}}@media screen and (min-width:992px){.j-content-around-lg{justify-content:space-around}}@media screen and (min-width:1200px){.j-content-around-xlg{justify-content:space-around}}.j-content-between{justify-content:space-between}@media screen and (min-width:480px){.j-content-between-xs{justify-content:space-between}}@media screen and (min-width:576px){.j-content-between-sm{justify-content:space-between}}@media screen and (min-width:768px){.j-content-between-md{justify-content:space-between}}@media screen and (min-width:992px){.j-content-between-lg{justify-content:space-between}}@media screen and (min-width:1200px){.j-content-between-xlg{justify-content:space-between}}.j-content-center{justify-content:center}@media screen and (min-width:480px){.j-content-center-xs{justify-content:center}}@media screen and (min-width:576px){.j-content-center-sm{justify-content:center}}@media screen and (min-width:768px){.j-content-center-md{justify-content:center}}@media screen and (min-width:992px){.j-content-center-lg{justify-content:center}}@media screen and (min-width:1200px){.j-content-center-xlg{justify-content:center}}.a-item-start{align-items:flex-start}@media screen and (min-width:480px){.a-item-start-xs{align-items:flex-start}}@media screen and (min-width:576px){.a-item-start-sm{align-items:flex-start}}@media screen and (min-width:768px){.a-item-start-md{align-items:flex-start}}@media screen and (min-width:992px){.a-item-start-lg{align-items:flex-start}}@media screen and (min-width:1200px){.a-item-start-xlg{align-items:flex-start}}.a-item-end{align-items:flex-end}@media screen and (min-width:480px){.a-item-end-xs{align-items:flex-end}}@media screen and (min-width:576px){.a-item-end-sm{align-items:flex-end}}@media screen and (min-width:768px){.a-item-end-md{align-items:flex-end}}@media screen and (min-width:992px){.a-item-end-lg{align-items:flex-end}}@media screen and (min-width:1200px){.a-item-end-xlg{align-items:flex-end}}.a-item-center{align-items:center}@media screen and (min-width:480px){.a-item-center-xs{align-items:center}}@media screen and (min-width:576px){.a-item-center-sm{align-items:center}}@media screen and (min-width:768px){.a-item-center-md{align-items:center}}@media screen and (min-width:992px){.a-item-center-lg{align-items:center}}@media screen and (min-width:1200px){.a-item-center-xlg{align-items:center}}.a-self-start{align-self:flex-start}@media screen and (min-width:480px){.a-self-start-xs{align-self:flex-start}}@media screen and (min-width:576px){.a-self-start-sm{align-self:flex-start}}@media screen and (min-width:768px){.a-self-start-md{align-self:flex-start}}@media screen and (min-width:992px){.a-self-start-lg{align-self:flex-start}}@media screen and (min-width:1200px){.a-self-start-xlg{align-self:flex-start}}.a-self-end{align-self:flex-end}@media screen and (min-width:480px){.a-self-end-xs{align-self:flex-end}}@media screen and (min-width:576px){.a-self-end-sm{align-self:flex-end}}@media screen and (min-width:768px){.a-self-end-md{align-self:flex-end}}@media screen and (min-width:992px){.a-self-end-lg{align-self:flex-end}}@media screen and (min-width:1200px){.a-self-end-xlg{align-self:flex-end}}.a-self-center{align-self:center}@media screen and (min-width:480px){.a-self-center-xs{align-self:center}}@media screen and (min-width:576px){.a-self-center-sm{align-self:center}}@media screen and (min-width:768px){.a-self-center-md{align-self:center}}@media screen and (min-width:992px){.a-self-center-lg{align-self:center}}@media screen and (min-width:1200px){.a-self-center-xlg{align-self:center}}.f-dir-row{flex-direction:row}@media screen and (min-width:480px){.f-dir-row-xs{flex-direction:row}}@media screen and (min-width:576px){.f-dir-row-sm{flex-direction:row}}@media screen and (min-width:768px){.f-dir-row-md{flex-direction:row}}@media screen and (min-width:992px){.f-dir-row-lg{flex-direction:row}}@media screen and (min-width:1200px){.f-dir-row-xlg{flex-direction:row}}.f-dir-column{flex-direction:column}@media screen and (min-width:480px){.f-dir-column-xs{flex-direction:column}}@media screen and (min-width:576px){.f-dir-column-sm{flex-direction:column}}@media screen and (min-width:768px){.f-dir-column-md{flex-direction:column}}@media screen and (min-width:992px){.f-dir-column-lg{flex-direction:column}}@media screen and (min-width:1200px){.f-dir-column-xlg{flex-direction:column}}.f-dir-row-reverse{flex-direction:row-reverse}@media screen and (min-width:480px){.f-dir-row-reverse-xs{flex-direction:row-reverse}}@media screen and (min-width:576px){.f-dir-row-reverse-sm{flex-direction:row-reverse}}@media screen and (min-width:768px){.f-dir-row-reverse-md{flex-direction:row-reverse}}@media screen and (min-width:992px){.f-dir-row-reverse-lg{flex-direction:row-reverse}}@media screen and (min-width:1200px){.f-dir-row-reverse-xlg{flex-direction:row-reverse}}.f-dir-column-reverse{flex-direction:column-reverse}@media screen and (min-width:480px){.f-dir-column-reverse-xs{flex-direction:column-reverse}}@media screen and (min-width:576px){.f-dir-column-reverse-sm{flex-direction:column-reverse}}@media screen and (min-width:768px){.f-dir-column-reverse-md{flex-direction:column-reverse}}@media screen and (min-width:992px){.f-dir-column-reverse-lg{flex-direction:column-reverse}}@media screen and (min-width:1200px){.f-dir-column-reverse-xlg{flex-direction:column-reverse}}.hide{display:none}@media screen and (min-width:480px){.min-hide-xs{display:none}}@media screen and (min-width:576px){.min-hide-sm{display:none}}@media screen and (min-width:768px){.min-hide-md{display:none}}@media screen and (min-width:992px){.min-hide-lg{display:none}}@media screen and (min-width:1200px){.min-hide-xlg{display:none}}@media screen and (max-width:480px){.max-hide-xs{display:none}}@media screen and (max-width:576px){.max-hide-sm{display:none}}@media screen and (max-width:768px){.max-hide-md{display:none}}@media screen and (max-width:992px){.max-hide-lg{display:none}}@media screen and (max-width:1200px){.max-hide-xlg{display:none}}.table,.table table{width:auto;max-width:100%;color:inherit}.table.is-expanded,.table.is-expanded table{width:100%}.table table{border-collapse:collapse}.table-headline{position:relative;}.table-headline th:hover:before{opacity:1}.table-headline th{text-align:left;font-weight:500;padding:16px}.table-body td{padding:16px}
+
+/*
+* COMPONENT
+-------------- */
+.btn {
+  padding: 12px 16px;
+  margin-bottom: 4px;
+  outline: 0;
+  border: 0;
+  font-weight: 500;
+  border-radius: 8px;
+  font-size: 14px;
+  display: inline-block;
+  transition: all .3s;
+}
+
+button.btn,
+a.btn {
+  cursor: pointer;
+}
+
+button.btn:hover,
+a.btn:hover {
+  opacity: 0.8;
+}
+
+.btn.is-icon .fas,
+.btn.is-icon .fa,
+.btn.is-icon .far,
+.btn.is-icon .fab {
+  width: 24px;
+  line-height: 24px;
+  text-align: center;
+  margin-right: 4px;
+}
+
+.alert {
+  background: #f8f8f8;
+  color: #222831;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.alert-headline {
+  font-weight: 500;
+  font-size: 20px;
+  display: block;
+  padding-bottom: 8px;
+}
+
+.alert.is-color {
+  background: #6267CB;
+  color: #fff;
+}
+
+.alert.is-green {
+  background: #8fa975;
+  color: #fff;
+}
+
+.alert.is-red {
+  background: #be6161;
+  color: #fff;
+}
+
+.alert.is-yellow {
+  background: #b5a15c;
+  color: #fff;
+}
+
+.alert.is-blue {
+  background: #6a92ec;
+  color: #fff;
+}
+
+.collapse-trigger {
+  cursor: pointer;
+  user-select: none;
+}
+
+.collapse-content {
+  display: none;
+  padding: 16px;
+}
+
+.collapse-content.is-active {
+  display: block;
+}
+
+/*
+* RESET
+-------------- */
+
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+input, textarea, select, option, button {
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+mark {
+  padding: 4px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+strong, b {
+  font-weight: 500;
+}
+
+blockquote {
+  border-radius: 4px;
+  margin: 0;
+  padding: 16px;
+}
+
+.fas, .far, .fab, .fa {
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6,
+.hl1, .hl2, .hl3, .hl4, .hl5, .hl6 {
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.hl1, h1 {
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.hl2, h2 {
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.hl3, h3 {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.hl4, h4 {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.hl5, h5 {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.hl6, h6 {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.lead {
+  line-height: 1.5;
+  font-size: 20px;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.drop-caps {
+  overflow: hidden;
+}
+
+.drop-caps:first-letter {
+  font-family: Georgia;
+  font-size: 64px;
+  float: left;
+  line-height: 60px;
+  padding-right: 8px;
+}
+
+.list {
+  margin-left: 16px;
+}
+
+.list li {
+  list-style: inherit;
+}
+
+.list li:not(:last-child) {
+  padding-bottom: 8px;
+}
+
+hr {
+  border-width: 3px;
+  border-style: solid;
+}
+
+hr.is-dashed {
+  border-style: dashed;
+}
+
+hr.is-double {
+  border-style: double;
+}
+
+hr.is-dotted {
+  border-style: dotted;
+}
+
+.img-expand {
+  position: relative;
+  width: calc(100% + 32px);
+  left: -16px;
+}
+
+.img-expand img {
+  width: 100% !important;
+  display: block;
+  border-radius: 0 !important;
+}
+
+/*
+* Navbar
+-------------- */
+
+.navbar-inner {
+  padding: 16px;
+  padding-top: 0;
+}
+
+.navbar-logo {
+  font-size: 38.4px;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  display: block;
+}
+
+.navbar-logo__about {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.navbar-action__item {
+  text-align: center;
+  width: 42px;
+  user-select: none;
+  line-height: 42px;
+  cursor: pointer;
+}
+
+.navbar-socialLink a {
+  display: inline-block;
+  width: 42px;
+  line-height: 42px;
+  margin: 0 4px;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all .3s;
+}
+
+
+/*
+* BG-OVERLAY (CANVAS)
+-------------- */
+
+.bg-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2001;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
+}
+
+.bg-overlay.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body.canvas-is-active {
+  overflow: hidden;
+}
+
+.canvas .sidebar .widget:not(.Blog) .widget-title {
+  font-size: 14px;
+  padding-left: 0;
+  opacity: 0.5;
+  border-left: 0;
+}
+
+
+/*
+* SEARCH OFF
+-------------- */
+
+.search-off {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  z-index: 4001;
+}
+
+.search-off__content {
+  padding: 16px;
+  display: block;
+}
+
+.search-off .form-input {
+  width: calc(100% - 24px);
+  opacity: 0;
+}
+
+.search-off__close {
+  padding: 0 24px;
+  cursor: pointer;
+  color: #be6161;
+  opacity: 0;
+}
+
+.search-off.is-active {
+  pointer-events: auto;
+  user-select: auto;
+  animation: .3s fadeInTop forwards;
+}
+
+.search-off.is-active .form-input {
+  animation: .3s fadeInLeft forwards;
+  animation-delay: .3s;
+}
+
+.search-off.is-active .search-off__close {
+  animation: .3s fadeInRight forwards;
+  animation-delay: .5s;
+}
+
+/*
+* FORM
+-------------- */
+
+.form-input {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 8px;
+  vertical-align: middle;
+}
+
+.form-input input,
+.form-input textarea {
+  width: 100%;
+  background: transparent;
+  outline: 0;
+  border: 0;
+  padding: 16px 0;
+}
+
+.form-input > i {
+  margin-right: 16px;
+}
+
+.form-input.is-textarea > i {
+  transform: translateY(-8px);
+}
+
+/*
+* HEADLINE
+-------------- */
+
+.headline-title {
+  font-weight: 700;
+  margin: 0;
+  padding: 0 12px;
+  font-size: 20px;
+}
+
+.headline-action {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px;
+  transition: all .3s;
+  border-radius: 8px;
+  position: relative;
+}
+
+.headline-action:before {
+  content: "";
+  position: absolute;
+  left: 90%;
+  bottom: 4px;
+  width: 0;
+  height: 3px;
+  transition: all .3s;
+}
+
+.headline-action:hover:before {
+  content: "";
+  position: absolute;
+  left: 35%;
+  bottom: 4px;
+  width: 35%;
+  height: 3px;
+}
+
+/*
+* Alerts
+-------------- */
+
+.alert {
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.alert-headline {
+  font-weight: 500;
+  font-size: 20px;
+  display: block;
+  padding-bottom: 8px;
+}
+
+.alert.is-opposite {
+  background: #222831;
+  color: #fff;
+}
+
+.alert.is-color {
+  background: #e43f5a;
+  color: #fff;
+}
+
+.alert.is-color-low {
+  background: #f7c5cd;
+  color: #e43f5a;
+}
+
+.alert.is-green {
+  background: #8fa975;
+  color: #fff;
+}
+
+.alert.is-green-low {
+  background: #e8eee3;
+  color: #8fa975;
+}
+
+.alert.is-red {
+  background: #be6161;
+  color: #fff;
+}
+
+.alert.is-red-low {
+  background: #f9f2f2;
+  color: #be6161;
+}
+
+.alert.is-yellow {
+  background: #b5a15c;
+  color: #fff;
+}
+
+.alert.is-yellow-low {
+  background: #f5f2e8;
+  color: #b5a15c;
+}
+
+.alert.is-blue {
+  background: #6a92ec;
+  color: #fff;
+}
+
+.alert.is-blue-low {
+  background: #f2f5fd;
+  color: #6a92ec;
+}
+
+/*
+* CARD
+-------------- */
+
+.card-thumbnail img {
+  width: 100%;
+  display: block;
+}
+
+.card-headline {
+  padding: 12px 16px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  transition: all .3s;
+}
+
+.card-title:hover {
+  color: #e43f5a;
+}
+
+.card-category {
+  display: inline-block;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: all .3s;
+}
+
+.card-meta__item {
+  font-size: 14px;
+  font-weight: 500;
+  transition: all .3s;
+}
+
+.card-meta__item > i {
+  margin-right: 8px;
+}
+
+.card-meta__item:not(:first-child) {
+  margin-left: 8px;
+}
+
+.card-snippet {
+  padding: 0 16px 16px 16px;
+  opacity: 0.8;
+  display: none;
+}
+
+.card.is-blog .card-thumbnail {
+  width: 90px;
+  height: 90px;
+}
+
+.card.is-blog .card-thumbnail img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card.is-blog .card-content {
+  width: calc(100% - 90px);
+}
+
+@media screen and (min-width: 480px) {
+  .card.is-blog .card-thumbnail {
+    width: 150px;
+    height: 140px;
+  }
+  .card.is-blog .card-content {
+    width: calc(100% - 150px);
+  }
+  .card-snippet {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card.is-blog .card-thumbnail {
+    width: 320px;
+    height: 250px;
+  }
+  .card.is-blog .card-content {
+    width: calc(100% - 320px);
+  }
+  .card-title {
+    font-size: 20px;
+  }
+}
+
+/*
+* OFFCANVAS
+-------------- */
+
+.canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  z-index: 3001;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: all .6s;
+}
+
+.canvas.is-active {
+  box-shadow: 6px 0 12px rgba(0, 0, 0, 0.1);
+  transform: translateX(0);
+}
+
+.canvas-menu ul li a {
+  padding: 12px 0;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all .3s;
+}
+
+.canvas-menu ul li a > i {
+  margin-right: 8px;
+}
+
+.canvas-menu ul li a .is-haveChild {
+  float: right;
+  position: relative;
+  top: 6px;
+  right: 12px;
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.canvas-menu .is-child {
+  display: none;
+}
+
+.canvas-menu .is-child ul {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.canvas-menu .is-child.is-active {
+  display: block;
+  animation: .3s fadeInTop forwards;
+}
+
+.canvas-menu .is-child li a {
+  padding: 12px;
+}
+
+.canvas-menu .is-child li a:hover {
+  background: transparent;
+}
+
+/*
+* GADGETS
+-------------- */
+
+.widget-content > img {
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.widget.BlogSearch form,
+.widget .follow-by-email-inner form {
+  overflow: hidden;
+}
+
+.widget.BlogSearch form input,
+.widget .follow-by-email-inner form input {
+  border: 0;
+  outline: 0;
+}
+
+.widget.BlogSearch form [class*="search-"],
+.widget .follow-by-email-inner form [class*="search-"] {
+  float: left;
+}
+
+.widget.BlogSearch form .search-input,
+.widget .follow-by-email-inner form .search-input {
+  width: calc(100% - 72px);
+  padding-right: 16px;
+}
+
+.widget.BlogSearch form .search-input input,
+.widget .follow-by-email-inner form .search-input input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.widget.BlogSearch form .follow-by-email-address,
+.widget .follow-by-email-inner form .follow-by-email-address {
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  display: block;
+}
+
+.widget.BlogSearch form .search-action,
+.widget.BlogSearch form .follow-by-email-submit,
+.widget .follow-by-email-inner form .search-action,
+.widget .follow-by-email-inner form .follow-by-email-submit {
+  color: #fff;
+  width: 72px;
+  padding: 16px 0;
+  border-radius: 8px;
+}
+
+.widget.BlogSearch form .follow-by-email-submit,
+.widget .follow-by-email-inner form .follow-by-email-submit {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.listLabel li {
+  padding: 8px 0;
+  font-weight: 500;
+}
+
+.listLabel li a {
+  opacity: .8;
+  transition: all .25s;
+}
+
+.listLabel li a:hover {
+  opacity: 1;
+}
+
+.listLabel .label-count {
+  opacity: .8;
+}
+
+.cloudLabel {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cloudLabel a {
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cloudLabel .label-count {
+  opacity: .8;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 14px;
+  opacity: .8;
+  margin-bottom: 8px;
+}
+
+.contact-form label span {
+  font-weight: bold;
+  color: red;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  width: 100%;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  border: 0;
+  outline: 0;
+}
+
+.contact-form input[type="button"] {
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity .25s;
+}
+
+.contact-form input[type="button"]:hover {
+  opacity: .8;
+}
+
+.sidebar .widget:not(.Blog) {
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.sidebar .widget:not(.Blog) .widget-title {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 4px 16px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.sidebar .widget:not(.Blog) .widget-content {
+  padding: 16px 0;
+  padding-top: 4px;
+  position: relative;
+}
+
+.wgts-featuredPost {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.wgts-featuredPost img {
+  width: 100%;
+  display: block;
+}
+
+.wgts-featuredPost__content {
+  padding: 24px;
+  padding-top: 48px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.wgts-featuredPost__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  transition: all .3s;
+}
+
+.wgts-featuredPost__snippet {
+  color: #fff;
+  opacity: 0.8;
+  margin: 8px 0;
+}
+
+.wgts-featuredPost-meta__item {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.wgts-featuredPost-meta__item[href]:hover {
+  color: #e43f5a;
+  opacity: 1;
+}
+
+.wgts-featuredPost-meta__item:not(:first-child) {
+  margin-left: 8px;
+}
+
+.wgts-featuredPost-meta__item > i {
+  margin-right: 8px;
+}
+
+.wgts-labels a {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  transition: all .3s;
+}
+
+.wgts-labels a:hover {
+  color: #fff;
+}
+
+.wgts-labels .is-count {
+  margin-left: 8px;
+  font-size: 12px;
+}
+
+.wgts-labels.is-list a {
+  display: block;
+  background: transparent;
+  padding: 16px 0;
+  margin: 0;
+  border-radius: 0;
+}
+
+.wgts-popularPost .is-count {
+  padding: 16px;
+  font-weight: 500;
+}
+
+.wgts-popularPost__item {
+  position: relative;
+}
+
+.wgts-popularPost__item:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.wgts-popularPost__headline {
+  padding: 16px;
+}
+
+.wgts-popularPost__title {
+  font-weight: 500;
+  font-size: 16px;
+  transition: .3s;
+}
+
+.wgts-popularPost-meta__item {
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.8;
+  transition: all .3s;
+}
+
+.wgts-popularPost-meta__item:not(:first-child) {
+  margin-left: 8px;
+}
+
+.wgts-popularPost-meta__item[href]:hover {
+  color: #e43f5a;
+}
+
+.wgts-popularPost-meta__item > i {
+  margin-right: 8px;
+}
+
+.wgts-popularPost__item[data-count]:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 4px 8px;
+  margin: -4px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  content: attr(data-count);
+  color: #fff;
+}
+
+.wgts-popularPost__item.is-thumbnail:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.wgts-popularPost__thumbnail {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.wgts-popularPost__item.is-thumbnail .wgts-popularPost__content {
+  width: calc(100% - 72px);
+}
+
+.wgts-popularPost__item.is-thumbnail .wgts-popularPost__headline {
+  padding: 0 16px;
+}
+
+.wgts-popularPost__item.is-thumbnail .wgts-popularPost__summary {
+  padding: 16px;
+  padding-top: 4px;
+  opacity: 0.5;
+}
+
+.wgts-popularPost__item.is-overlay:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.wgts-popularPost__item.is-overlay img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wgts-popularPost__item.is-overlay[data-count]:before {
+  z-index: 102;
+  margin: 8px;
+}
+
+.wgts-popularPost__item.is-overlay .wgts-popularPost__content {
+  width: 100%;
+  position: relative;
+  padding: 48px 32px;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 101;
+  border-radius: 8px;
+}
+
+@media screen and (min-width: 576px) {
+  .wgts-popularPost__item.is-overlay .wgts-popularPost__content {
+    padding: 32px 48px;
+  }
+}
+
+.wgts-popularPost__item.is-overlay .wgts-popularPost__title:not(:hover),
+.wgts-popularPost__item.is-overlay .wgts-popularPost-meta__item,
+.wgts-popularPost__item.is-overlay .wgts-popularPost__summary {
+  color: #fff;
+}
+
+.wgts-popularPost__item.is-overlay .wgts-popularPost__headline,
+.wgts-popularPost__item.is-overlay .wgts-popularPost__summary {
+  padding: 0;
+}
+
+.widget.BlogSearch form .search-action,
+.widget.BlogSearch form .follow-by-email-submit,
+.widget .follow-by-email-inner form .search-action,
+.widget .follow-by-email-inner form .follow-by-email-submit {
+  color: #fff;
+  cursor: pointer;
+}
+
+.contact-form input:not([type="button"]), .contact-form textarea {
+  border-radius: 8px;
+}
+
+.contact-form input[type="button"] {
+  color: #fff;
+}
+
+.wgts-list li {
+  padding: 8px 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  opacity: .8;
+}
+
+.wgts-list li:last-child {
+  border-bottom: 0;
+}
+
+.wgts-list li.is-link {
+  opacity: 1;
+}
+
+.wgts-list li.is-link a {
+  opacity: .8;
+  transition: all .25s;
+}
+
+.wgts-list li.is-link a:hover {
+  opacity: 1;
+}
+
+
+/*
+* FOOTER
+-------------- */
+
+.footer {
+  color: #fff;
+}
+
+.footer-about {
+  padding: 16px;
+  padding-bottom: 0;
+}
+
+.footer-about__title {
+  font-size: 28px;
+  opacity: 0.5;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer-about__summary {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.footer-brands a {
+  color: #fff;
+  display: inline-block;
+  padding: 16px;
+  padding-left: 0;
+  padding-top: 0;
+  opacity: 0.5;
+  transition: all .5s;
+}
+
+.footer-brands a:hover {
+  opacity: 1;
+}
+
+/*
+* POST
+-------------- */
+
+.post-header__title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.post-header-meta__item {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(34, 40, 49, 0.8);
+  transition: all .3s;
+}
+
+.post-header-meta__item:not(:first-child) {
+  margin-left: 8px;
+}
+
+.post-header-meta__item > i {
+  margin-right: 4px;
+}
+
+.post-header-meta__item img {
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.post-content {
+  padding: 16px 0;
+}
+
+.post-content ul,
+.post-content ol {
+  margin-left: 16px;
+}
+
+.post-content ul li,
+.post-content ol li {
+  list-style: inherit;
+}
+
+.post-content ul li:not(:last-child),
+.post-content ol li:not(:last-child) {
+  padding-bottom: 8px;
+}
+
+.post-content ul li:not(:last-child),
+.post-content ol li:not(:last-child) {
+  padding-bottom: 8px;
+}
+
+.post-content .separator a {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+.post-content img[data-original-width],
+.post-content img[data-original-height] {
+  height: auto;
+}
+
+.post-content img:not([data-original-width]),
+.post-content img:not([data-original-height]) {
+  display: inline;
+}
+
+.post-content img {
+  width: auto;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.post-content a:not(.btn) {
+  font-weight: 500;
+}
+
+.post-content a:not(.btn):visited {
+  color: #222831;
+}
+
+.post-content a:not(.btn):hover {
+  text-decoration: underline;
+}
+
+.post-content pre,
+.post-content code {
+  padding: 16px;
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
+/*
+* POST: TAGS
+-------------- */
+
+.post-tags a {
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  margin-right: 8px;
+  margin-bottom: 4px;
+  transition: all .3s;
+}
+
+/*
+* POST: RELATED
+-------------- */
+
+.post-related .card {
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.post-related .card-thumbnail {
+  width: 92px;
+  height: 92px;
+}
+
+.post-related .card-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+.post-related .card-headline {
+  padding: 8px 16px;
+}
+
+.post-related .card-content {
+  width: calc(100% - 92px);
+}
+
+.post-related .card-title {
+  font-size: 16px;
+  margin: 0;
+}
+
+.post-related-content {
+  position: relative;
+  left: -8px;
+  width: calc(100% + 16px);
+}
+
+/*
+* POST: COMMENTS
+-------------- */
+
+.post-cmt {
+  position: relative;
+}
+
+.post-cmt-content {
+  padding: 16px 0;
+  padding-top: 0;
+}
+
+.post-cmt-content .comments,
+.post-cmt-content .post-comments .post-content__headline {
+  padding: 8px 0;
+  padding-top: 0;
+}
+
+.post-cmt-content .comments .comment {
+  position: relative;
+}
+
+.post-cmt-content .comments a {
+  font-weight: 500;
+}
+
+.post-cmt-content .comments .avatar-image-container {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTIiIGhlaWdodD0iNTIiIHZpZXdCb3g9IjAgMCA1MiA1MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggb3BhY2l0eT0iMC4zIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTI2IDI3QzMwLjQxODMgMjcgMzQgMjMuNDE4MyAzNCAxOUMzNCAxNC41ODE3IDMwLjQxODMgMTEgMjYgMTFDMjEuNTgxNyAxMSAxOCAxNC41ODE3IDE4IDE5QzE4IDIzLjQxODMgMjEuNTgxNyAyNyAyNiAyN1pNMjQgMjlDMTYuODIwMyAyOSAxMSAzNC44MjAzIDExIDQySDQxQzQxIDM0LjgyMDMgMzUuMTc5NyAyOSAyOCAyOUgyNFoiIGZpbGw9ImJsYWNrIi8+Cjwvc3ZnPgo=);
+  background-size: cover;
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+  border-radius: 4px;
+}
+
+.post-cmt-content .comments .comment-replies .avatar-image-container {
+  width: 38px;
+  height: 38px;
+}
+
+.post-cmt-content .comments .avatar-image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.post-cmt-content .comments .comment-block {
+  margin-left: calc(48px + 8px);
+}
+
+.post-cmt-content .comments .comment-replies .comment-thread {
+  padding: 16px;
+}
+
+.post-cmt-content .comments .comment-replies .comment-block {
+  margin-left: calc(38px + 8px);
+}
+
+.post-cmt-content .comments .comment-header {
+  padding: 8px 0;
+  padding-top: 0;
+  font-weight: 500;
+  position: relative;
+}
+
+.post-cmt-content .comments .comment-header .user,
+.post-cmt-content .comments .comment-header .datetime {
+  margin-right: 8px;
+  font-style: normal;
+  opacity: 0.75;
+}
+
+.post-cmt-content .comments .comment-header .user:hover,
+.post-cmt-content .comments .comment-header .datetime:hover {
+  opacity: 1;
+}
+
+.post-cmt-content .comments .comment-content {
+  border-radius: 8px;
+  padding: 16px 0;
+  padding-top: 0;
+  font-weight: 500;
+}
+
+.post-cmt-content .comments .comment-reply {
+  padding: 8px;
+  font-weight: 500;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.post-cmt-content .comments .comment-replies {
+  padding: 16px 0;
+  margin-left: calc(38px + 27px);
+}
+
+.post-cmt-content .comments .hidden {
+  display: none;
+}
+
+.post-cmt-content .comments .thread-toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.25s ease;
+}
+
+.post-cmt-content .comments .thread-toggle:hover {
+  opacity: 1;
+}
+
+.post-cmt-content .comments .thread-toggle:before {
+  font-family: "bundle";
+  content: "a";
+  display: inline-block;
+  margin: 8px 16px;
+  transform-origin: center center;
+  transition: 0.25s ease;
+}
+
+.post-cmt-content .comments .thread-toggle.thread-collapsed:before {
+  transform: rotateX(180deg);
+}
+
+.post-cmt-content .comments .thread-toggle .thread-arrow,
+.post-cmt-content .comments .thread-toggle .thread-count {
+  display: none;
+}
+
+/*
+* POST: SHARE
+-------------- */
+
+.post-share {
+  padding: 16px 0;
+}
+
+.post-share-text {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.post-share-brand {
+  border-radius: 8px;
+}
+
+.post-share-brand a {
+  display: inline-block;
+  width: 42px;
+  line-height: 42px;
+  text-align: center;
+  transition: all .3s;
+}
+
+/*
+* BLOG PAGER
+-------------- */
+
+.blog-pager a {
+  border-radius: 8px;
+  display: inline-block;
+  padding: 12px 16px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all .3s;
+}
+
+/*
+* FOOTER
+-------------- */
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-copyright a {
+  color: #fff;
+}
+
+/*
+* DEFAULT SKIN
+-------------- */
+
+::selection {
+	background: #6267CB;
+	color: #fff;
+}
+
+body {
+	background: #ffffff;
+	color: #222831;
+	font-family: Custom, Roboto, sans-serif;
+}
+
+.table-headline {
+	border-bottom: 5px solid #f7f7f7;
+}
+
+a {
+	color: #222831;
+}
+
+mark {
+	padding: 4px;
+	background: #f7f7f7;
+	color: #222831;
+	font-size: 14px;
+	border-radius: 4px;
+}
+
+hr {
+	border-color: #f7f7f7;
+}
+
+
+/*=> NAVBAR */
+
+.navbar-logo {
+	color: #222831;
+	font-family: Custom, "Oswald", sans-serif;
+}
+
+.navbar-socialLink a:hover {
+	background: rgba(98, 103, 203, 0.1);
+	color: #6267CB;
+}
+
+
+/*=> CANVAS */
+
+.canvas {
+	background: #ffffff;
+}
+
+
+/*=> SEARCH OFF */
+
+.search-off {
+	background: #ffffff;
+}
+
+
+/*=> FORM */
+
+.form-input {
+	background: #f7f7f7;
+}
+
+.form-input input::placeholder,
+.form-input textarea::placeholder {
+	font-family: Custom, Roboto, sans-serif;
+}
+
+
+/*=> Alert */
+
+.alert {
+	background: #f7f7f7;
+	color: #222831;
+}
+
+
+/*=> HEADLINE, WIDGET TITLE */
+
+.headline,
+.sidebar .widget:not(.Blog) .widget-title {
+	color: #222831;
+}
+
+.headline-title,
+.sidebar .widget:not(.Blog) .widget-title {
+	border-left: 2px solid #f7f7f7;
+}
+
+.headline-action {
+	color: rgba(34, 40, 49, 0.8);
+}
+
+.headline-action:hover {
+	color: #6267CB;
+}
+
+.headline-action:before {
+	background: #6267CB;
+}
+
+
+/*=> CARD */
+
+.card {
+	color: #222831;
+}
+
+.card-title {
+	color: #222831;
+}
+
+.card-title:hover,
+.card-meta__item[href]:hover {
+	color: #6267CB;
+}
+
+.card-category {
+	background: #6267CB;
+}
+
+.card-category:hover {
+	background: #222831;
+}
+
+
+/*=> GADGETS */
+
+.widget.BlogSearch form .search-action,
+.widget.BlogSearch form .follow-by-email-submit,
+.widget .follow-by-email-inner form .search-action,
+.widget .follow-by-email-inner form .follow-by-email-submit,
+.contact-form input[type="button"],
+.wgts-popularPost__item[data-count]:before {
+	background: #6267CB;
+}
+
+.contact-form input:not([type="button"]),
+.contact-form textarea {
+	background: #f7f7f7;
+	color: rgba(34, 40, 49, 0.8);
+}
+
+.contact-form input:not([type="button"])::placeholder,
+.contact-form textarea::placeholder {
+	color: rgba(34, 40, 49, 0.8);
+}
+
+.widget.BlogSearch form .follow-by-email-address,
+.widget .follow-by-email-inner form .follow-by-email-address {
+	background: #f7f7f7;
+}
+
+.widget.BlogSearch form .search-input input,
+.widget .follow-by-email-inner form .search-input input {
+	background: #f7f7f7;
+}
+
+.wgts-labels a {
+	background: #f7f7f7;
+	color: rgba(34, 40, 49, 0.8);
+}
+
+.wgts-labels a:hover {
+	background: #6267CB;
+}
+
+.wgts-labels.is-list a:not(:last-child),
+.wgts-popularPost__item.is-thumbnail:not(:last-child) {
+	border-bottom: 2px solid #f7f7f7;
+}
+
+.wgts-labels.is-list a:hover {
+	background: transparent;
+	color: #6267CB;
+}
+
+.wgts-popularPost .is-count {
+	background: #f7f7f7;
+	color: rgba(34, 40, 49, 0.5);
+}
+
+.wgts-popularPost__title:hover,
+.wgts-featuredPost__title:hover {
+	color: #6267CB;
+}
+
+
+/*=> CANVAS */
+
+.canvas-menu ul li a {
+	color: rgba(34, 40, 49, 0.8);
+}
+
+.canvas-menu ul li a:hover {
+	color: #6267CB;
+}
+
+.canvas-menu .is-child {
+	background: #f7f7f7;
+}
+
+
+/*=> COMPONENT */
+
+.btn {
+	background: #f7f7f7;
+	color: #222831;
+}
+
+.btn.is-color {
+	background: #6267CB;
+	color: #fff;
+}
+
+
+/*=> POST */
+
+blockquote {
+	color: rgba(34, 40, 49, 0.8);
+	border-left: 5px solid #f7f7f7;
+}
+
+.post-content a:not(.btn) {
+	color: #6267CB;
+}
+
+.post-content pre,
+.post-content code {
+	background: #f7f7f7;
+}
+
+.post-header-meta__item {
+	color: rgba(34, 40, 49, 0.8);
+}
+
+.post-header-meta__item[href]:hover {
+	color: #6267CB;
+}
+
+.post-share {
+	border-top: 5px solid #f7f7f7;
+	border-bottom: 5px solid #f7f7f7;
+}
+
+.post-share-brand {
+	background: #f7f7f7;
+}
+
+.post-share-brand a {
+	color: rgba(34, 40, 49, 0.8);
+}
+
+.post-share-brand a:hover {
+	color: #6267CB;
+}
+
+.post-tags a {
+	color: rgba(34, 40, 49, 0.8);
+	border: 1px solid #f7f7f7;
+}
+
+.post-tags a:hover {
+	background: #f7f7f7;
+}
+
+
+/*=> POST: COMMENTS */
+
+.post-cmt,
+.post-cmt-content .comments a {
+	color: #222831;
+}
+
+.post-cmt-content .comments .comment-content {
+	color: rgba(34, 40, 49, 0.7);
+}
+
+.post-cmt-content .comments .avatar-image-container {
+	background: #f7f7f7;
+}
+
+.post-cmt-content .comments .comment-replies .comment-thread {
+	border-left: 5px solid #f7f7f7;
+}
+
+
+/*=> COMPONENT */
+
+.btn {
+	background: #f7f7f7;
+	color: #222831;
+}
+
+.dropdown-list {
+	background: #ffffff;
+}
+
+.dropdown-list__item[href]:hover {
+	background: #f7f7f7;
+}
+
+
+/*=> BLOG PAGER */
+
+.blog-pager a {
+	border-radius: 8px;
+	display: inline-block;
+	padding: 12px 16px;
+	background: #f7f7f7;
+	color: rgba(34, 40, 49, 0.8);
+	font-weight: 500;
+	font-size: 14px;
+	transition: all .3s;
+}
+
+.blog-pager a:hover {
+	background: #6267CB;
+	color: #fff;
+}
+
+
+/*=> FOOTER */
+
+.footer {
+	background: #22272d;
+}
+
+.footer-brands a:hover,
+.footer .wgts-list li.is-link a:hover,
+.footer-copyright a:hover {
+	color: #6267CB;
+}
+
+.footer .widget-title {
+	border-left: 3px solid #6267CB;
+}
+/*]]>*/</style>
+
+<b:skin><![CDATA[
+/*=> Reset */
+widget-item-control,
+span.item-control.blog-admin,
+.item-control.blog-admin {
+	display: none;
+}
+
+/*=> Comment editor */
+#comment-editor {
+border: 0;
+outline: 0;
+width: 100%;
+min-height: 200px;}
+
+
+/*
+  <!-- General -->
+	<Variable name="config.comment" description="Comment system" type="string" default="blogger" value="blogger"/>
+	<Variable name="config.shortname" description="Shortname" type="string" default="shortname" value="shortname"/>
+	<Variable name="config.fbID" description="App id facebook" type="string" default="fbID" value="fbID"/>
+*/
+
+]]></b:skin>
+
+<b:if cond='data:view.isLayoutMode'>
+<b:template-skin><![CDATA[
+body#layout {
+  width: 1000px;
+  overflow-x: hidden !important;
+  padding: 32px;}
+
+body#layout #navbar {
+	max-width: 100% !important;
+	margin: 16px 4px !important;
+}
+
+body#layout .layout div.section#header-panel-left {
+    width: 48%;
+    float: left;
+    margin-right: 12px;
+}
+
+body#layout .layout div.section#header-panel-right {
+    width: 48%;
+    float: right;
+    margin-left: 12px;
+}
+
+.layout:after {
+    content: "";
+    display: block;
+    height: 2px;
+    clear: both;}
+
+body#layout div.widget > h4, {
+    padding: 16px;
+    margin: 0;
+    background: rgba(235,235,235,.3) !important;
+    color: #595959;}
+
+body#layout .widget,
+body#layout #layout-main .widget {
+  width: 100% !important;
+  margin: 0 !important;
+  display: block !important;}
+
+body#layout .dr_active {
+    background: #f8f8f8;
+    margin: 0 12px;
+    border: 1px dashed rgba(0,0,0,.11);
+    border-radius: 8px;}
+
+body#layout div.section {
+    border-radius: 4px;
+    padding: 0 !important;
+    border: 1px solid rgba(0,0,0,.1) !important;
+    background: #fff !important;
+    margin-bottom: 32px;}
+
+body#layout div.section > h4 {
+  padding: 16px;
+  margin: 0;
+  margin-bottom: 8px;
+  background: rgba(235,235,235,.3) !important;
+  color: #595959;}
+
+body#layout div.add_widget {
+  padding: 8px;
+  border: 0;
+  margin: 11px;
+  border-radius: 0;
+  background: transparent;}
+
+body#layout div.add_widget a {
+  color: rgba(0,0,0,.5);
+  font-weight: 500px;
+  text-decoration: none;}
+
+body#layout div.add_widget a:hover {
+  color: rgba(0,0,0,.75);}
+
+body#layout div .widget {
+    margin: 0 12px 12px !important;
+    display: block !important;}
+
+body#layout .draggable-widget .widget-wrap3 {
+  background: #fff url(https://www.gstatic.com/images/icons/material/system/1x/drag_indicator_grey600_24dp.png) no-repeat 9px center;
+  padding-left: 42px;
+  margin-left: 0;}
+
+body#layout div.widget-content div.layout-title,
+body#layout div.widget-content div.layout-widget-description {
+  margin: 0 32px;}
+
+body#layout .widget-content {
+  padding: 12px;
+  border-radius: 4px;
+  background: #fff;}
+
+body#layout .widget-content .editlink {
+  position: absolute;
+  right: 12px;
+  top: 12px;}
+
+body#layout .layout .layout-main {
+  width: 48%;
+  float: left;
+  margin: 16px 0;}
+
+body#layout .layout .layout-column {
+  width: 48%;
+  float: right;
+  margin: 16px 0;}
+
+body#layout .footer-copyrights .section {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+body#layout .footer-widget .d-flex:after {
+  clear: both;
+  display: block;
+}
+
+body#layout .footer-widget #footer-widget-3 {
+  margin-right: 0 !important;}
+
+body#layout .footer-widget .d-flex > div {
+  width: 32.45%;
+  float: left;
+}
+]]></b:template-skin>
+</b:if>
+
+</head>
+
+<body>
+
+<!-- Default markups -->
+<b:defaultmarkups>
+	<!-- Common -->
+	<b:defaultmarkup type='Common'>
+		<b:includable id='widget-title'>
+			<h2 class='widget-title'><data:title/></h2>
+		</b:includable>
+	</b:defaultmarkup>
+
+	<!-- ContactForm -->
+	<b:defaultmarkup type='ContactForm'>
+		<b:includable id='main'>
+			<b:include name='widget-title'/>
+			<div class='widget-content'>
+				<div class='contact-form'>
+				    <div class='form'>
+						<form name='contact-form'>
+							<label for='name'><data:contactFormNameMsg/></label>
+							<input class='contact-form-name' expr:id='data:widget.instanceId + "_contact-form-name"' name='name' size='30' type='text' value=''/>
+
+							<label for="contact-form-name"><data:contactFormEmailMsg/> <span>*</span></label>
+							<input class='contact-form-email' expr:id='data:widget.instanceId + "_contact-form-email"' name='email' size='30' type='text' value=''/>
+
+							<label for="#"><data:contactFormMessageMsg/> <span>*</span></label>
+							<textarea class='contact-form-email-message' cols='25' expr:id='data:widget.instanceId + "_contact-form-email-message"' name='email-message' rows='5'/>
+
+							<input class='contact-form-button contact-form-button-submit' expr:id='data:widget.instanceId + "_contact-form-submit"' expr:value='data:contactFormSendMsg' type='button'/>
+
+							<div style='text-align: center; max-width: 222px; width: 100%'>
+								<p class='contact-form-error-message' expr:id='data:widget.instanceId + "_contact-form-error-message"'/>
+								<p class='contact-form-success-message' expr:id='data:widget.instanceId + "_contact-form-success-message"'/>
+							</div>
+						</form>
+				    </div>
+				</div>
+			</div>
+		</b:includable>
+	</b:defaultmarkup>
+
+	<!-- TextList -->
+	<b:defaultmarkup type='TextList'>
+		<b:includable id='main'>
+			<b:include name='widget-title'/>
+			<div class='widget-content'>
+				<ul class='wgts-list'>
+					<b:loop values='data:items' var='item'>
+						<li><data:item/></li>
+					</b:loop>
+				</ul>
+			</div>
+		</b:includable>
+	</b:defaultmarkup>
+
+	<!-- PageList -->
+	<b:defaultmarkup type='PageList'>
+		<b:includable id='main'>
+			<b:include name='widget-title'/>
+			<div class='widget-content'>
+				<ul class='wgts-list'>
+					<b:loop values='data:links' var='link'>
+						<li class='is-link'><a expr:href='data:link.href'><data:link.title/></a></li>
+					</b:loop>
+				</ul>
+			</div>
+		</b:includable>
+	</b:defaultmarkup>
+
+	<!-- LinkList -->
+	<b:defaultmarkup type='LinkList'>
+		<b:includable id='main'>
+			<b:include name='widget-title'/>
+			<div class='widget-content'>
+				<ul class='wgts-list'>
+					<b:loop values='data:links' var='link'>
+						<li class='is-link'><a expr:href='data:link.target'><data:link.name/></a></li>
+					</b:loop>
+				</ul>
+			</div>
+		</b:includable>
+	</b:defaultmarkup>
+
+	<!-- Label -->
+	<b:defaultmarkup type='Label'>
+
+		<b:includable id='label'>
+			<b:loop values='data:labels' var='label'>
+				<a expr:href='data:label.url' rel='tag'>
+					<data:label.name/>
+					<b:if cond='data:showFreqNumbers'><span class='is-count'><data:label.count/></span></b:if>
+				</a>
+			</b:loop>
+		</b:includable>
+
+		<b:includable id='main'>
+			<b:include name='widget-title'/>
+			<div class='widget-content'>
+				<div class='wgts-labels'>
+					<b:class cond='data:display == "list"' name='is-list' />
+					<b:include name='label'/>
+				</div>
+			</div>
+		</b:includable>
+	</b:defaultmarkup>
+
+	<!-- FeaturedPost -->
+	<b:defaultmarkup type='FeaturedPost'>
+		<b:includable id='thumbnail'>
+			<a expr:href='data:post.url' class='featuredPost-thumbnail'><img expr:src='resizeImage(data:post.featuredImage, 300)' expr:alt='data:post.title' data-krsImage='{"w": "300", "h": "350"}'/></a>
+		</b:includable>
+
+		<b:includable id='summary'>
+			<p class='wgts-featuredPost__snippet'>
+				<b:with var='summary' value='data:post.snippets.long snippet {length: 130, ellipsis: true}'>
+					<data:summary/>
+				</b:with>
+			</p>
+		</b:includable>
+
+		<b:includable id='main'>
+			<b:include name='widget-title'/>
+			<div class='widget-content'>
+				<b:loop values='data:posts' var='post'>
+					<div class='wgts-featuredPost'>
+						<b:include name='thumbnail' cond='data:postDisplay.showSnippet' />
+						<div class="wgts-featuredPost__content">
+							<a expr:href='data:post.url' expr:title='data:post.title'><h3 class='wgts-featuredPost__title'><data:post.title/></h3></a>
+							<b:include name='summary' cond='data:postDisplay.showSnippet and data:post.snippets.long.size > 2'/>
+							<div class="wgts-featuredPost-meta m4-t">
+								<span class='wgts-featuredPost-meta__item'><i class="fas fa-user"></i> <data:post.author.name/></span>
+								<span class='wgts-featuredPost-meta__item'><i class="fas fa-clock"></i> <data:post.date/></span>
+							</div>
+						</div>
+					</div>
+				</b:loop>
+			</div>
+		</b:includable>
+	</b:defaultmarkup>
+
+	<!-- PopularPosts -->
+	<b:defaultmarkup type='PopularPosts'>
+
+		<b:includable id='thumbnail'>
+			<a expr:href='data:post.url'>
+				<img class='wgts-popularPost__thumbnail' expr:src='resizeImage(data:post.featuredImage, 72, "1:1")'/>
+			</a>
+		</b:includable>
+
+		<b:includable id='title'>
+			<a expr:href='data:post.url'><span class='wgts-popularPost__title'><data:post.title/></span></a>
+		</b:includable>
+
+		<b:includable id='snippet'>
+			<b:if cond='data:post.snippets.short.length'>
+				<p class='wgts-popularPost__summary'>
+					<b:eval expr='data:post.snippets.short snippet {length: 90, ellipsis: true}'/>
+				</p>
+			</b:if>
+		</b:includable>
+
+		<b:includable id='meta'>
+			<div class='wgts-popularPost-meta m4-t'>
+				<span class='wgts-popularPost-meta__item'><i class='fas fa-user'></i> <data:post.author.name /></span>
+				<span class='wgts-popularPost-meta__item'><i class='fas fa-clock'></i> <data:post.date/></span>
+			</div>
+		</b:includable>
+
+
+		<b:includable id='default'>
+			<div class='wgts-popularPost__item d-flex'>
+				<div class='is-count'><b:eval expr='data:index + 1'/></div>
+				<div class='wgts-popularPost__content'>
+					<div class='wgts-popularPost__headline'>
+						<b:include name='title' />
+					</div>
+				</div>
+			</div>
+		</b:includable>
+
+
+		<b:includable id='classic'>
+			<div class='wgts-popularPost__item is-thumbnail d-flex f-wrap' expr:data-count='data:index + 1'>
+				<b:include name='thumbnail' cond='data:postDisplay.showFeaturedImage'/>
+				<div class='wgts-popularPost__content'>
+					<div class='wgts-popularPost__headline'>
+						<b:include name='meta'/>
+						<b:include name='title'/>
+					</div>
+					<b:include name='snippet' cond='data:postDisplay.showSnippet'/>
+				</div>
+			</div>
+		</b:includable>
+
+		<b:includable id='main'>
+			<b:include name='widget-title'/>
+			<div class='widget-content'>
+				<div class='wgts-popularPost'>
+					<b:loop values='data:posts' var='post' index='index'>
+						<b:include name='classic' />
+					</b:loop>
+				</div>
+			</div>
+		</b:includable>
+	</b:defaultmarkup>
+</b:defaultmarkups>
+
+<!-- Header -->
+<div class='navbar-outer layout is-box is-auto m32-b'>
+	<div class='d-flex a-item-center j-content-between p16'>
+		<div class='navbar-action'>
+			<span class='navbar-action__item canvas-trigger'><i class='fas fa-bars'></i></span>
+		</div>
+		<div class="navbar-action">
+			<span class='navbar-action__item search-trigger'><i class='fas fa-search'></i></span>
+			<div class='search-off'>
+				<div class='search-off__content layout is-box is-auto'>
+					<form action='/search' class='d-flex a-item-center'>
+						<div class='form-input'>
+							<i class='fas fa-search'></i>
+							<input type='text' expr:placeholder='data:messages.search' name='q'/>
+						</div>
+						<span class='search-off__close'><i class='fas fa-times'></i></span>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='navbar-inner align-center'>
+		<b:section id='header' class='w100 w50-lg m-auto' maxwidgets='1'>
+			<b:widget id='Header1' title='Logo' type='Header' version='2' locked='true'>
+				<b:includable id='main'>
+					<b:if cond='data:sourceUrl'>
+						<a expr:href='data:blog.homepageUrl'><img expr:src='data:sourceUrl' expr:alt='data:title' class='navbar-logo'/></a>
+					<b:else/>
+						<a expr:href='data:blog.homepageUrl' class='navbar-logo'><data:title/></a>
+					</b:if>
+					<b:if cond='data:description'>
+						<p class='navbar-logo__about'>
+							<data:description/>
+						</p>
+					</b:if>
+				</b:includable>
+			</b:widget>
+		</b:section>
+	</div>
+	<b:section id='socialLink' maxwidgets='1'>
+		<!-- Social link -->
+		<b:widget id='LinkList100' title='Social links' type='LinkList' locked='true'>
+			<b:includable id='main'>
+				<nav class='navbar-socialLink align-center'>
+					<b:loop values='data:links' var='link'>
+						<a expr:href='data:link.target'><i expr:class='data:link.name'></i></a>
+					</b:loop>
+				</nav>
+			</b:includable>
+		</b:widget><!-- ./Social link -->
+	</b:section>
+</div>
+<!-- ./Header -->
+
+<!-- offcanvas -->
+<aside class='canvas'>
+<b:section id='canvas-sidebar' class='canvas-content sidebar p16'>
+	<b:widget id='HTML1' title='Menu' type='HTML' locked='true'>
+		<b:widget-settings>
+		  <b:widget-setting name='content'>
+<![CDATA[
+<ul>
+	<li><a href="/">Home</a></li>
+	<li><a href="/p/shortcodes.html">Shortcode</a></li>
+	<li><a href="#">Buy theme</a>
+		<ul class="is-child">
+			<li><a href="#">Gumroad</a></li>
+			<li><a href="https://store.karasu-themes.com/search?q=Hominen">Oficial site</a></li>
+		</ul>
+	</li>
+</ul>
+]]>
+		  </b:widget-setting>
+		</b:widget-settings>
+		<b:includable id="main">
+      <div class="widget-title"><data:title/></div>
+      <div class="widget-content">
+        <nav class='canvas-menu'>
+          <data:content/>
+        </nav>
+      </div>
+		</b:includable>
+	</b:widget>
+</b:section>
+</aside>
+<!-- ./offcanvas -->
+
+<!-- Main layout -->
+<div class='layout is-box is-auto is-2column d-flex f-wrap'>
+<!-- Blog -->
+<b:section id='blog' class='layout-main'>
+
+	<b:widget id='Blog1' type='Blog'>
+
+		<b:includable id='main' var='top'>
+
+			<!-- headline -->
+			<b:if cond='data:view.isHomepage'>
+				<div class='headline d-flex a-item-center j-content-between p16'>
+					<h2 class='headline-title'><data:messages.recentPosts/></h2>
+					<a class='headline-action' expr:href='"/search?max-results=" + data:posts.size'><data:messages.showAll/></a>
+				</div>
+			</b:if><!-- ./headline -->
+
+			<!-- navMessage -->
+			<b:if cond='data:posts.size == 0'>
+					<div class='alert m16'><data:navMessage/></div>
+				<b:elseif cond='data:view.search.query or data:view.search.label'/>
+					<div class='alert m16'><data:navMessage/></div>
+			</b:if><!-- ./navMessages -->
+
+			<!-- Loop -->
+			<b:if cond='data:view.isMultipleItems'>
+					<b:loop values='data:posts' var='post'>
+						<b:include name='post' data='post'/>
+					</b:loop>
+					<b:include name='postPagination'/>
+				<b:else/>
+					<b:loop values='data:posts' var='post'>
+						<b:include name='post' data='post'/>
+					</b:loop>
+			</b:if><!-- ./loop -->
+
+		</b:includable>
+
+		<b:includable id='card.thumbnail'>
+			<a expr:href='data:post.url' class='card-thumbnail'><img expr:src='resizeImage(data:post.featuredImage, 400)' expr:alt='data:post.title'/></a>
+		</b:includable>
+
+		<b:includable id='card.title'>
+			<a expr:href='data:post.url' expr:title='data:post.title'><h2 class='card-title'><data:post.title/></h2></a>
+		</b:includable>
+
+		<b:includable id='card.meta:user'>
+			<a expr:href='data:post.author.profileUrl' rel='author' class='card-meta__item skin-txt:hover'><i class='fas fa-user'></i>
+				<data:post.author.name /></a>
+		</b:includable>
+
+		<b:includable id='card.meta:timestamp'>
+			<time class='card-meta__item' expr:datetime='data:post.date.iso8601'><i class='fas fa-clock'></i>
+				<data:post.date /></time>
+		</b:includable>
+
+		<b:includable id='card.meta'>
+			<div class='card-meta'>
+				<b:include name='card.meta:user' />
+				<b:include name='card.meta:timestamp' />
+			</div>
+		</b:includable>
+
+
+		<b:includable id='card.headline'>
+			<div class='card-headline'>
+				<b:include name='card.title' />
+				<b:include name='card.meta' />
+			</div>
+		</b:includable>
+
+		<b:includable id='card.snippet'>
+			<b:if cond='data:post.snippets.short.length'>
+				<p class='card-snippet'>
+					<data:post.snippets.short/>
+				</p>
+			</b:if>
+		</b:includable>
+
+		<b:includable id='card-default'>
+			<div class='card is-blog d-flex f-wrap'>
+				<b:include name='card.thumbnail' />
+				<div class='card-content'>
+					<b:include name='card.headline' />
+					<b:include name='card.snippet' />
+				</div>
+			</div>
+		</b:includable>
+
+
+		<b:includable id='post.meta:user'>
+			<a expr:href='data:post.author.profileUrl' class='post-header-meta__item'>
+				<img expr:src='data:post.author.authorPhoto.image' expr:alt='data:post.author.name'/>
+				<i class="fas fa-user"></i> <data:post.author.name/>
+			</a>
+		</b:includable>
+
+		<b:includable id='post.meta:timestamp'>
+			<time class='post-header-meta__item' expr:datetime='data:post.date.iso8601'><i class='fas fa-clock'></i>
+				<data:post.date /></time>
+		</b:includable>
+
+		<b:includable id='post.meta:comments'>
+			<span class='post-header-meta__item'><i class='fas fa-comment'></i>
+				<data:post.numberOfComments/></span>
+		</b:includable>
+
+		<b:includable id='post.tags'>
+      <div class='post-tags m16-y'>
+        <b:loop var='tag' values='data:post.labels'>
+          <a expr:href='data:tag.url'><data:tag.name/></a>
+        </b:loop>
+      </div>
+		</b:includable>
+
+		<b:includable id='post.cmt'>
+			<div class='post-cmt'>
+    		<div class="post-cmt-header m16-b">
+					<h3 class='post-cmt-header-title headline-title'><data:messages.comments/></h3>
+				</div>
+        <div class='post-cmt-content'>
+          <b:include name='comments' />
+        </div>
+      </div>
+		</b:includable>
+
+    <b:includable id='post.related' data='post'>
+      <div class='post-related m16-b'>
+				<div class="post-related-header">
+					<h2 class="post-cmt-header-title headline-title">Articulos recomendados</h2>
+				</div>
+        <div id='wjs-related' class='post-related-content d-flex f-wrap a-item-start'/>
+      </div>
+      <script>
+      /*!
+        * wjs-related v2.1.0
+        * Copyright 2018 zkreations
+        * Developed by José Gregorio (fb.com/JGMateran)
+        * Licensed under MIT (github.com/zkreations/wjs-related/blob/master/LICENSE)
+        */
+      var related = (function(){
+      'use strict';
+
+      //Configuracion
+      var defaults = {
+          id: '<data:post.id/>',
+          homepage: window.location.protocol + '//' + window.location.hostname,
+          image: 'src/imgdefault.jpg', //Imagen por defecto
+          length: 4, //Cantidad de entradas
+          localeDate: '<data:blog.locale.language/>', //Idioma
+          snippet: 50, //Cantidad de texto
+          imgSize: 's90-c', //Recorte de la imagen
+          container: document.getElementById('wjs-related'),
+          tags: [<b:loop values='data:post.labels' var='label'>'<data:label.name/>',</b:loop>]
+      };
+
+      //<![CDATA[
+      var tags$length = defaults.tags.length;
+      var script = document.createElement( 'script' );
+      var src = defaults.homepage + '/feeds/posts/default' +
+          '?alt=json-in-script' +
+          '&callback=related' +
+          '&max-results=' + ( defaults.length + 1 ) +
+          '&q=';
+      for ( var n = 0; n < tags$length; n++ ){
+          src += 'label:"' + defaults.tags[ n ] + '"' + ( n === tags$length - 1 ? '' : '|' );
+      }
+      script.src = src;
+      document.body.appendChild( script );
+      function render( data ){
+          var title = data.title.$t;
+          var content = data.content;
+          var summary = data.summary;
+          var body = content ? content.$t : summary.$t;
+          var snippet = (body).replace(/<[^>]*>?/g,'').substring( 0, defaults.snippet ) + '...';
+          var img = data.media$thumbnail;
+          var tempHtml = document.createElement('div');
+          tempHtml.innerHTML = body;
+          var imgHtml = tempHtml.querySelector('img');
+          var image = ( img ? img.url : (imgHtml ? imgHtml.src : defaults.image)).replace(/[swh]\d{2,4}(?:-[swh]\d{2,4})?(?:-c)?/, defaults.imgSize);
+          var url = (function(){
+            for ( var i = 0; i < data.link.length; i++ ){
+                var link = data.link[i];
+                if ( link.rel === 'alternate' ){
+                  return link.href;
+                }
+            }
+          })();
+          var published = new Date( data.published.$t ).toLocaleDateString(
+            defaults.localeDate,
+            {year:'numeric', month:'long', day: 'numeric'}
+          );
+          return (
+            '<div class="c12 c6-md p8">'+
+              '<div class="card d-flex f-wrap">'+
+                '<a href="' + url + '" class="card-thumbnail"><img src="' + image + '" alt="' + title + '"></a>'+
+                '<div class="card-content">				'+
+                  '<div class="card-headline">				'+
+                    '<a href="' + url + '"><h3 class="card-title">' + title + '</h3></a>'+
+                    '<div class="card-meta">'+
+                      '<span class="card-meta__item"><i class="fas fa-clock"></i>' + published + '</span>'+
+                    '</div>'+
+                  '</div>'+
+                '</div>'+
+              '</div>'+
+            '</div>'
+          );
+      }
+      function related( json ){
+          var i = 0;
+          var post;
+          var length = defaults.length;
+          for ( ; i < length && ( post = json.feed.entry[ i ] ); i++ ){
+            if ( defaults.id !== post.id.$t.split( '.post-' )[ 1 ] ){
+                defaults.container.innerHTML += render( post );
+            } else {
+                length++;
+            }
+          }
+      }
+      return related;
+      })();
+    //]]></script>
+    </b:includable>
+
+		<b:includable id='post' var='post'>
+
+			<b:if cond='data:view.isMultipleItems'>
+
+				<div class='c12 p16'>
+					<b:include name='card-default' />
+				</div>
+
+				<b:elseif cond='data:view.isPost'/>
+
+				<article class='post p16'>
+					<header class='post-header m16-b'>
+						<h1 class='post-header__title'><data:post.title/></h1>
+						<div class='post-header-meta'>
+							<b:include name='post.meta:user' cond='data:widgets.Blog.first.allBylineItems.author'/>
+							<b:include name='post.meta:timestamp' cond='data:widgets.Blog.first.allBylineItems.timestamp'/>
+							<b:include name='post.meta:comments'/>
+						</div>
+					</header>
+					<div class='post-content'><data:post.body/></div>
+
+          <b:include name='post.tags' />
+
+					<div class='post-share m24-b d-flex j-content-between'>
+						<div class='post-share-left d-flex f-wrap a-item-center'>
+							<span class='post-share-text m16-r'><i class='fas fa-share'></i></span>
+							<div class='post-share-brand krs-opw'>
+								<a expr:href='appendParams("https://www.facebook.com/sharer/sharer.php", {u: data:post.url})'>
+									<i class='fab fa-facebook-f'></i></a>
+								<a expr:href='appendParams("https://twitter.com/intent/tweet", {url: data:post.url})'>
+									<i class='fab fa-twitter'></i></a>
+								<a expr:href='appendParams("https://pinterest.com/pin/create/button", {url: data:post.url, media: data:post.featuredImage})'>
+									<i class='fab fa-pinterest'></i></a>
+								<a expr:href='appendParams("https://www.tumblr.com/share/photo", {url: data:post.featuredImage, caption: data:post.url})'>
+									<i class='fab fa-tumblr'></i></a>
+								<a expr:href='appendParams("https://www.blogger.com/share-post.g", {blogID: data:blog.blogId, postID: data:post.id, target: "email"})'><i class='fas fa-envelope'></i></a>
+							</div>
+						</div>
+						<div class='post-share-right'></div>
+					</div>
+
+          <b:include name='post.related' />
+          <b:include name='post.cmt' />
+
+				</article>
+
+				<b:elseif cond='data:view.isPage'/>
+
+				<article class='post p16'>
+					<header class='post-header m16-b'>
+						<h1 class='post-header__title'><data:post.title/></h1>
+						<div class='post-header-meta'>
+							<b:include name='post.meta:timestamp' cond='data:widgets.Blog.first.allBylineItems.timestamp'/>
+							<b:include name='post.meta:comments'/>
+						</div>
+					</header>
+					<div class='post-content'><data:post.body/></div>
+
+          <b:include name='post.tags' />
+
+					<div class='post-share m24-b d-flex j-content-between'>
+						<div class='post-share-left d-flex f-wrap a-item-center'>
+							<span class='post-share-text m16-r'><i class='fas fa-share'></i></span>
+							<div class='post-share-brand krs-opw'>
+								<a expr:href='appendParams("https://www.facebook.com/sharer/sharer.php", {u: data:post.url})'>
+									<i class='fab fa-facebook-f'></i></a>
+								<a expr:href='appendParams("https://twitter.com/intent/tweet", {url: data:post.url})'>
+									<i class='fab fa-twitter'></i></a>
+								<a expr:href='appendParams("https://pinterest.com/pin/create/button", {url: data:post.url, media: data:post.featuredImage})'>
+									<i class='fab fa-pinterest'></i></a>
+								<a expr:href='appendParams("https://www.tumblr.com/share/photo", {url: data:post.featuredImage, caption: data:post.url})'>
+									<i class='fab fa-tumblr'></i></a>
+								<a expr:href='appendParams("https://www.blogger.com/share-post.g", {blogID: data:blog.blogId, postID: data:post.id, target: "email"})'><i class='fas fa-envelope'></i></a>
+							</div>
+						</div>
+						<div class='post-share-right'></div>
+					</div>
+
+          <b:include name='post.cmt' />
+
+				</article>
+
+			</b:if>
+
+		</b:includable>
+
+		<b:includable id="comment-blogger">
+			<b:include name='commentPicker' data='post'/>
+		</b:includable>
+
+		<b:includable id="comment-disqus">
+            <div id="disqus_thread"></div>
+            <script>
+				var disqus_config = function(){
+					this.page.url = "<data:view.url.canonical/>";
+					this.page.title = "<data:view.title.escaped/>";};
+				(function() {
+					var d = document, s = d.createElement('script');
+					s.src = 'https://<data:skin.vars.config_shortname/>.disqus.com/embed.js';
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+				})();
+            </script>
+		</b:includable>
+
+		<b:includable id='postPagination'>
+		  <div class='blog-pager p16' id='blog-pager'>
+		    <b:include cond='data:newerPageUrl' name='previousPageLink'/>
+		    <b:include cond='data:olderPageUrl' name='nextPageLink'/>
+		  </div>
+		</b:includable>
+
+		<b:includable id='previousPageLink'>
+        	<b:tag name='a' expr:href='data:newerPageUrl'><data:messages.newerPosts/></b:tag>
+		</b:includable>
+
+        <b:includable id='nextPageLink'>
+        	<b:tag name='a' expr:href='data:olderPageUrl'><data:messages.olderPosts/></b:tag>
+        </b:includable>
+
+        <b:includable id='status-message'>
+        	<b:tag name='div' class='alert'><data:navMessage/></b:tag>
+        </b:includable>
+
+		<b:includable id="comment-facebook">
+			<div id="fb-root"></div>
+			<b:if cond='data:skin.vars.config_comment == "facebook"'>
+				<script async='async' defer='defer' crossorigin='anonymous' src='https://connect.facebook.net/es_LA/all.js#xfbml=1'></script>
+			</b:if>
+			<div class='fb-comments' expr:data-href='data:view.url.canonical' data-width='100%' data-numposts='5'></div>
+		</b:includable>
+
+		<b:includable id="commentPicker" var='post'>
+			<div class='comments threaded' expr:data-embed='data:post.embedCommentForm' expr:data-num-comments='data:post.numberOfComments' id='comments'>
+				<a name='comments'/>
+
+				<div class='comments-content'>
+					<div id='comment-holder'><data:post.commentHtml/></div>
+				</div>
+
+        <b:if cond='data:post.allowNewComments'>
+          <b:include data='post' name='threadedCommentForm'/>
+        <b:else/>
+          <p class='comment-footer alert'>
+            <data:post.noNewCommentsText/>
+          </p>
+        </b:if>
+			</div>
+		</b:includable>
+
+		<b:includable id='comments'>
+			<b:include expr:name='"comment-" + data:skin.vars.config_comment'/>
+		</b:includable>
+
+		<b:includable id='threadedCommentForm' var='post'>
+		  <div class='comment-form'>
+		    <a name='comment-form'/>
+		    <b:include data='post' name='commentFormIframeSrc'/>
+		    <iframe class='blogger-iframe-colorize blogger-comment-from-post' id='comment-editor' name='comment-editor' src=''/>
+		    <data:post.cmtfpIframe/>
+		    <script type='text/javascript'>BLOG_CMT_createIframe('<data:post.appRpcRelayPath/>');//<![CDATA[
+		    (function(){let img = document.querySelectorAll('.avatar-image-container img');for (var i = 0; i < img.length; i++) {let imgPath = img[i].getAttribute('src');img[i].setAttribute('src', imgPath.replace(/s\B\d{2,4}/,"s56"));}})();//]]></script>
+		  </div>
+		</b:includable>
+
+		<b:includable id='threadedCommentJs' var='post'>
+		  <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
+		    <b:template-script inline='true' name='threaded_comments'/>
+		    <script type='text/javascript'>
+		      blogger.widgets.blog.initThreadedComments(<data:post.commentJso/>, <data:post.commentMsgs/>, <data:post.commentConfig/>);
+		    </script>
+		</b:includable>
+
+		<b:includable id='paginationLink'><!--empty--></b:includable>
+
+	</b:widget>
+
+</b:section><!-- ./Blog -->
+
+<!-- Sidebar -->
+<div class='layout-column p16'>
+<b:section id='sidebar' class='sidebar'>
+	<b:widget id='Label1' locked='false' title='Labels' type='Label' visible='true'/>
+	<b:widget id='PopularPosts1' locked='false' title='Most viewed' type='PopularPosts' visible='true'/>
+</b:section>
+</div><!-- ./Sidebar -->
+
+</div><!-- ./Main layout -->
+
+<!-- Footer -->
+<footer class='footer m48-t'>
+<div class='footer-copyright'>
+	<div class='layout is-auto is-box p24-y p16-x align-center'>
+		Created by <a href="//karasu-themes.blogspot.com" property="cc:attributionName" rel="nofollow" target="_blank">Karasu themes</a> &amp; <a href="https://www.blogger.com/">blogger</a> - <i class="fas fa-copyright"></i>
+		<a href='/'><data:blog.title/></a>
+		<b:section id='footer-copyright' maxwidgets='1' class='d-inline m8-l'>
+			<b:widget id='Text1' title='Attribution' type='Text' locked='true' version='2'>
+				<b:includable id='main'><b:eval expr='data:content ? " | " + data:content : ""'/></b:includable>
+			</b:widget>
+		</b:section>
+	</div>
+</div>
+</footer>
+<!-- ./Footer -->
+
+<!-- Bg overlay -->
+<div class="bg-overlay"></div>
+
+<!-- CDN FontAwesome -->
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+
+<!-- Karasu-image v1.0 -->
+<script src="//cdn.jsdelivr.net/gh/Karasu-themes/karasu-plugins/karasu-image/dest/krs-image.min.js"></script>
+
+<!-- Karasu-dev (utils/Component) -->
+<script src='//cdn.jsdelivr.net/gh/Karasu-themes/karasu@0.1.17/dest/js/karasu-dev.min.js'></script>
+
+<!-- Google Analytics -->
+<b:include data='blog' name='google-analytics'/>
+
+<!-- Open window -->
+<script>//<![CDATA[
+(function(){
+let opw = document.querySelectorAll('.krs-opw a');
+for (var i = 0; i < opw.length; i++) {
+  let self = opw[i];
+  opw[i].addEventListener('click', e=>{
+	e.preventDefault();
+	window.open(self.href, "","width=600,height=400,left="+(screen.width/2-300)+",top="+(screen.height/2-200))
+  })}
+})();
+//]]></script>
+
+<!-- Javascript (Required karasu) -->
+<script>
+//<![CDATA[
+!function(){const{click:e,each:c,css:t}=raven.utils;let i=document.querySelector(".bg-overlay");(()=>{let c=document.querySelector(".canvas-trigger"),o=document.querySelector(".canvas");body=document.body,e(c,e=>{t.add(o,"is-active"),t.add(i,"is-visible"),t.add(body,"canvas-is-active")}),e(i,e=>{t.remove(o,"is-active"),t.remove(i,"is-visible"),t.remove(body,"canvas-is-active")})})(),(()=>{let c=document.querySelector(".search-trigger"),o=document.querySelector(".search-off"),a=document.querySelector(".search-off__close");e(c,e=>{t.add(o,"is-active"),t.add(i,"is-visible"),o.querySelector("input").focus()}),e(a,e=>{t.remove(o,"is-active"),t.remove(i,"is-visible")}),e(i,e=>{t.remove(o,"is-active"),t.remove(i,"is-visible")})})(),(()=>{let i=document.querySelectorAll(".canvas-menu ul li a");c(i,(c,i)=>{let o=i,a=o.parentNode.querySelector("ul");if(a){let e=document.createElement("i");e.className="is-haveChild "+_ICON_SUB_MENU,o.appendChild(e)}e(o,e=>{a&&e.preventDefault(),t.toggle(a,"is-active")})})})()}();
+
+// Init karasu component
+const { dropdown, snackbar, collapse } = raven.components;
+dropdown();
+snackbar();
+collapse();
+//]]></script>
+
+</body>
+</html>
