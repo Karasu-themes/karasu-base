@@ -36,8 +36,7 @@
 widget-item-control,
 span.item-control.blog-admin,
 .item-control.blog-admin {
-	display: none;
-}
+	display: none;}
 
 /*=> Comment editor */
 #comment-editor {
@@ -48,8 +47,7 @@ min-height: 200px;}
 
 
 /*
-  	<!-- General -->
-	<Variable name="body.background.color" description="Theme color for Mobile" type="color" default="#fff"  value="#fff"/>
+  <!-- General -->
 	<Variable name="config.comment" description="Comment system" type="string" default="blogger" value="blogger"/>
 	<Variable name="config.shortname" description="Shortname" type="string" default="shortname" value="shortname"/>
 	<Variable name="config.fbID" description="App id facebook" type="string" default="fbID" value="fbID"/>
@@ -89,17 +87,14 @@ min-height: 200px;}
 
 		<b:includable id='post' var='post'>
 			<b:if cond='data:view.isMultipleItems'>
-
 				<!-- Multiple items here -->
 
 				<b:elseif cond='data:view.isPost'/>
-
         <!-- single items here -->
 
 				<b:include name='comments' /> <!-- Comments -->
 
 				<b:elseif cond='data:view.isPage'/>
-
 				<!-- Page items here -->
 
 			</b:if>
@@ -110,18 +105,8 @@ min-height: 200px;}
 		</b:includable>
 
 		<b:includable id="comment-disqus">
-            <div id="disqus_thread"></div>
-            <script>
-				var disqus_config = function(){
-					this.page.url = "<data:view.url.canonical/>";
-					this.page.title = "<data:view.title.escaped/>";};
-				(function() {
-					var d = document, s = d.createElement('script');
-					s.src = 'https://<data:skin.vars.config_shortname/>.disqus.com/embed.js';
-					s.setAttribute('data-timestamp', +new Date());
-					(d.head || d.body).appendChild(s);
-				})();
-            </script>
+        <div id="disqus_thread"/>
+        <script>var disqus_config=function(){this.page.url="<data:view.url.canonical/>",this.page.title="<data:view.title.escaped/>"};!function(){var t=document,e=t.createElement("script");e.src="https://<data:skin.vars.config_shortname/>.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}();</script>
 		</b:includable>
 
 		<b:includable id='postPagination'>
@@ -144,7 +129,7 @@ min-height: 200px;}
     </b:includable>
 
 		<b:includable id="comment-facebook">
-			<div id="fb-root"></div>
+			<div id="fb-root"/>
 			<b:if cond='data:skin.vars.config_comment == "facebook"'>
 				<script async='async' defer='defer' crossorigin='anonymous' src='https://connect.facebook.net/es_LA/all.js#xfbml=1'></script>
 			</b:if>
@@ -152,26 +137,25 @@ min-height: 200px;}
 		</b:includable>
 
 		<b:includable id="commentPicker" var='post'>
-			<div class='comments threaded' expr:data-embed='data:post.embedCommentForm' expr:data-num-comments='data:post.numberOfComments' id='comments'>
+			<div class='comments threaded'
+          expr:data-embed='data:post.embedCommentForm' expr:data-num-comments='data:post.numberOfComments' id='comments'>
 				<a name='comments'/>
 
 				<div class='comments-content'>
 					<div id='comment-holder'><data:post.commentHtml/></div>
 				</div>
 
-				<p class='comment-footer alert'>
-					<b:if cond='data:post.allowNewComments'>
-						<b:include data='post' name='threadedCommentForm'/>
-					<b:else/>
-						<data:post.noNewCommentsText/>
-					</b:if>
-				</p>
+        <b:if cond='data:post.allowNewComments'>
+          <b:include data='post' name='threadedCommentForm'/>
+        <b:else/>
+          <p class='comment-footer'>
+            <data:post.noNewCommentsText/>
+          </p>
+        </b:if>
 			</div>
 		</b:includable>
 
-		<b:includable id='comments'>
-			<b:include expr:name='"comment-" + data:skin.vars.config_comment'/>
-		</b:includable>
+		<b:includable id='comments'><b:include expr:name='"comment-" + data:skin.vars.config_comment'/></b:includable>
 
 		<b:includable id='threadedCommentForm' var='post'>
 		  <div class='comment-form'>
@@ -187,9 +171,7 @@ min-height: 200px;}
 		<b:includable id='threadedCommentJs' var='post'>
 		  <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
 		    <b:template-script inline='true' name='threaded_comments'/>
-		    <script type='text/javascript'>
-		      blogger.widgets.blog.initThreadedComments(<data:post.commentJso/>, <data:post.commentMsgs/>, <data:post.commentConfig/>);
-		    </script>
+		    <script type='text/javascript'>blogger.widgets.blog.initThreadedComments(<data:post.commentJso/>, <data:post.commentMsgs/>, <data:post.commentConfig/>);</script>
 		</b:includable>
 
 		<b:includable id='paginationLink'><!--empty--></b:includable>
