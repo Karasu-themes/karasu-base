@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.locale.languageDirection' expr:lang='data:blog.locale.language' prefix='og: http://ogp.me/ns#'>
-<!-- Karasu-base.xml v1.3.2 | github.com/Karasu-themes/karasu-base -->
+<html b:css='false' b:js='false' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.locale.languageDirection' expr:lang='data:blog.locale.language' prefix='og: http://ogp.me/ns#'>
+<!-- Karasu-base.xml v1.3.5 | github.com/Karasu-themes/karasu-base -->
 <head>
 
 <!-- Title -->
@@ -25,13 +25,16 @@
 <!-- LD+Json search box -->
 <script type='application/ld+json'>
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@type": "WebSite",
   "url": "<data:blog.homepageUrl.canonical/>",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "<data:blog.searchUrl/>?q={search_term_string}",
-    "query-input": "required name=search_term_sstring"
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "<data:blog.searchUrl.canonical/>?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
   }
 }
 </script>
