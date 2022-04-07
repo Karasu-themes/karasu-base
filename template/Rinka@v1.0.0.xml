@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
 <html b:css='false' b:js='true' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.locale.languageDirection' expr:lang='data:blog.locale.language' prefix='og: http://ogp.me/ns#'>
-<!-- Rinka @ v1.0 Free - Karasu-base.xml v1.3.5 | github.com/Karasu-themes/karasu-base -->
+<!-- Rinka @ v1.0.3 Free - Karasu-base.xml v1.3.5 | github.com/Karasu-themes/karasu-base -->
 <head>
 
 <!-- Title -->
@@ -414,8 +414,7 @@ button[class*=cv-btn]:hover {
 }
 
 /* Component: table */
-.table,
-.table table {
+.table {
   width: auto;
   max-width: 100%;
   color: inherit;
@@ -443,6 +442,12 @@ button[class*=cv-btn]:hover {
 
 .table-body td {
   padding: 1rem;
+}
+
+@media screen and (max-width: 48em){
+  .table {
+    overflow-x: auto;
+  }
 }
 
 /*=> Component: images */
@@ -1083,9 +1088,11 @@ button[class*=cv-btn]:hover {
 
 /*=> post: breadcrumbs */
 .post\:breadcrumbs {
+  background: var(--light);
   font-size: var(--size-btn);
   color: var(--text);
-  padding: 0;
+  padding: 1rem;
+  border-radius: 0.25rem;
 }
 
 .post\:breadcrumbs li {
@@ -1887,7 +1894,7 @@ body#layout .footer-widget .d-flex > div {
 
     <b:includable id='post.breadcrumbs'>
       <ol class='post:breadcrumbs flex items-center gap-16 m8-b'>
-        <a expr:href='data:blog.homepageUrl'><i class='fas fa-home'></i></a>
+        <li><a expr:href='data:blog.homepageUrl'><i class='fas fa-home'></i></a></li>
         <b:if cond='data:post.labels.notEmpty'>
           <b:loop var='l' values='data:post.labels limit 2'>
             <li><a expr:href='data:l.url'><data:l.name/></a></li>
