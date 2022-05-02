@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
 <html b:css='false' b:js='false' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.locale.languageDirection' expr:lang='data:blog.locale.language' prefix='og: http://ogp.me/ns#'>
-<!-- Karasu-base.xml v1.3.5 | github.com/Karasu-themes/karasu-base -->
+<!-- Karasu-base.xml v1.3.7 | github.com/Karasu-themes/karasu-base -->
 <head>
 
 <!-- Title -->
@@ -21,23 +21,6 @@
 
 <!-- Meta data: Viewport -->
 <meta content='width=device-width, initial-scale=1' name='viewport'/>
-
-<!-- LD+Json search box -->
-<script type='application/ld+json'>
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "url": "<data:blog.homepageUrl.canonical/>",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "<data:blog.searchUrl.canonical/>?q={search_term_string}"
-    },
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
 
 <style>/*<![CDATA[*/
 /* Main css */
@@ -70,6 +53,7 @@ min-height: 200px;}
 /* Your own css style is goes here */
 /*]]>*/</style>
 
+<!-- Layout style css -->
 <b:if cond='data:view.isLayoutMode'>
 <b:template-skin><![CDATA[
 /* Your layout style is goes here */
@@ -117,7 +101,7 @@ min-height: 200px;}
 		</b:includable>
 
 		<b:includable id="comment-blogger">
-		  <b:include name='commentPicker' data='post'/>
+      <b:include name='commentPicker' data='post'/>
 		</b:includable>
 
 		<b:includable id="comment-disqus">
@@ -126,10 +110,10 @@ min-height: 200px;}
 		</b:includable>
 
 		<b:includable id='postPagination'>
-		  <div class='blog-pager' id='blog-pager'>
-		    <b:include cond='data:newerPageUrl' name='previousPageLink'/>
-		    <b:include cond='data:olderPageUrl' name='nextPageLink'/>
-		  </div>
+      <div class='blog-pager' id='blog-pager'>
+        <b:include cond='data:newerPageUrl' name='previousPageLink'/>
+        <b:include cond='data:olderPageUrl' name='nextPageLink'/>
+      </div>
 		</b:includable>
 
 		<b:includable id='previousPageLink'>
@@ -174,20 +158,20 @@ min-height: 200px;}
 		<b:includable id='comments'><b:include expr:name='"comment-" + data:skin.vars.config_cmt'/></b:includable>
 
 		<b:includable id='threadedCommentForm' var='post'>
-		  <div class='comment-form'>
-		    <a name='comment-form'/>
-		    <b:include data='post' name='commentFormIframeSrc'/>
-		    <iframe class='blogger-iframe-colorize blogger-comment-from-post' id='comment-editor' name='comment-editor' src=''/>
-		    <data:post.cmtfpIframe/>
-		    <script type='text/javascript'>BLOG_CMT_createIframe('<data:post.appRpcRelayPath/>');//<![CDATA[
-		    (function(){let img = document.querySelectorAll('.avatar-image-container img');for (var i = 0; i < img.length; i++) {let imgPath = img[i].getAttribute('src');img[i].setAttribute('src', imgPath.replace(/s\B\d{2,4}/,"s56"));}})();//]]></script>
-		  </div>
+      <div class='comment-form'>
+        <a name='comment-form'/>
+        <b:include data='post' name='commentFormIframeSrc'/>
+        <iframe class='blogger-iframe-colorize blogger-comment-from-post' id='comment-editor' name='comment-editor' src=''/>
+        <data:post.cmtfpIframe/>
+        <script type='text/javascript'>BLOG_CMT_createIframe('<data:post.appRpcRelayPath/>');//<![CDATA[
+        (function(){let img = document.querySelectorAll('.avatar-image-container img');for (var i = 0; i < img.length; i++) {let imgPath = img[i].getAttribute('src');img[i].setAttribute('src', imgPath.replace(/s\B\d{2,4}/,"s56"));}})();//]]></script>
+      </div>
 		</b:includable>
 
 		<b:includable id='threadedCommentJs' var='post'>
-		  <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
-		    <b:template-script inline='true' name='threaded_comments'/>
-		    <script type='text/javascript'>blogger.widgets.blog.initThreadedComments(<data:post.commentJso/>, <data:post.commentMsgs/>, <data:post.commentConfig/>);</script>
+      <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
+        <b:template-script inline='true' name='threaded_comments'/>
+        <script type='text/javascript'>blogger.widgets.blog.initThreadedComments(<data:post.commentJso/>, <data:post.commentMsgs/>, <data:post.commentConfig/>);</script>
 		</b:includable>
 
 		<b:includable id='paginationLink'><!--empty--></b:includable>

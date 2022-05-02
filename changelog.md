@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.3.7
+
+- Se ha removido el código `LD+JSON` de Cuadro de búsuqeda
+- Se han hecho modificaciones leves al código
+
 ## v1.3.5
 
 - Se ha actualizado el código de `LD+JSON` para el estandar actual
